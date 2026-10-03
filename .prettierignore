@@ -6,3 +6,7 @@ public/assets
 .ds-sync
 ds-bundle
 *.generated.ts
+
+# documentação de origem: manter byte a byte
+docs/brandbook.md
+docs/orientacoes-originais.txt
