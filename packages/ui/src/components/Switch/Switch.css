@@ -27,7 +27,7 @@
   padding: 2px;
   border: 0;
   border-radius: var(--mdia-radius-full);
-  background: var(--mdia-color-border);
+  background: var(--mdia-color-border-strong);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: background-color var(--mdia-motion-feedback) var(--mdia-motion-easing);

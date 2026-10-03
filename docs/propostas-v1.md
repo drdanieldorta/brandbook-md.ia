@@ -15,13 +15,14 @@ Contrastes calculados pela fórmula WCAG 2.x (relação mínima 4,5:1 para texto
 
 ## 2. Neutros de interface (observados na demonstração do guia)
 
-| Token                  | Valor                     | Contraste                              |
-| ---------------------- | ------------------------- | -------------------------------------- |
-| Texto secundário       | `#57677B`                 | 5,78:1 sobre branco; 5,34:1 sobre gelo |
-| Texto desabilitado     | `#536278` sobre `#DDE4ED` | 4,84:1                                 |
-| Borda                  | `#DDE4ED`                 | —                                      |
-| Hover do secundário    | `#E9F0F9`                 | azul-noite sobre ele: 12,3:1           |
-| Hover da ação discreta | `#EDF3FD`                 | azul vivo sobre ele: 5,04:1            |
+| Token                                        | Valor                     | Contraste                                                                                                             |
+| -------------------------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Texto secundário                             | `#57677B`                 | 5,78:1 sobre branco; 5,34:1 sobre gelo                                                                                |
+| Texto desabilitado                           | `#536278` sobre `#DDE4ED` | 4,84:1                                                                                                                |
+| Borda                                        | `#DDE4ED`                 | 1,3:1 sobre branco: só para cards, divisores e tabelas                                                                |
+| Borda de controles (campos, caixas, trilhos) | `#75849A`                 | 3,80:1 sobre branco; 3,51:1 sobre gelo; 3,72:1 sobre azul-noite (mínimo 3:1 para limites de componentes, WCAG 1.4.11) |
+| Hover do secundário                          | `#E9F0F9`                 | azul-noite sobre ele: 12,3:1                                                                                          |
+| Hover da ação discreta                       | `#EDF3FD`                 | azul vivo sobre ele: 5,04:1                                                                                           |
 
 ## 3. Superfícies escuras
 

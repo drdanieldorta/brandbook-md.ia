@@ -22,7 +22,7 @@
   height: var(--mdia-size-touch);
   margin: 0;
   padding: 0 var(--mdia-space-4);
-  border: 1px solid var(--mdia-color-border);
+  border: 1px solid var(--mdia-color-border-strong);
   border-radius: var(--mdia-radius-button);
   background: var(--mdia-color-surface);
   color: var(--mdia-color-text);

@@ -24,7 +24,7 @@
   justify-content: center;
   width: 20px;
   height: 20px;
-  border: 2px solid var(--mdia-color-border);
+  border: 2px solid var(--mdia-color-border-strong);
   border-radius: calc(var(--mdia-radius-button) / 2);
   background: var(--mdia-color-surface);
   color: var(--mdia-color-white);

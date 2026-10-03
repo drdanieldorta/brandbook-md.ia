@@ -21,6 +21,7 @@
   --mdia-color-text-secondary: #57677b;
   --mdia-color-text-disabled: #536278;
   --mdia-color-border: #dde4ed;
+  --mdia-color-border-strong: #75849a; /* PROPOSTA v1: limites de controles de formulário, >= 3:1 sobre branco, gelo e azul-noite (WCAG 1.4.11) */
   --mdia-color-surface: var(--mdia-color-white);
   --mdia-color-surface-alt: var(--mdia-color-ice);
   --mdia-color-surface-hover: #e9f0f9;
