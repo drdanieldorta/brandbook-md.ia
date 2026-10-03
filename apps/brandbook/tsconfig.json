@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "paths": {
       "@mdia/ui": ["../../packages/ui/src/index.ts"],
-      "@mdia/ui/styles.css": ["../../packages/ui/src/styles/index.css"]
+      "@mdia/ui/styles.css": ["../../packages/ui/src/styles/index.css"],
+      "@mdia/ui/tokens.css?raw": ["../../packages/ui/src/tokens/tokens.css"]
     }
   },
   "include": ["src", "vite.config.ts"]
