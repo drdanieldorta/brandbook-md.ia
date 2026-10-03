@@ -1,26 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import {
-  CalendarDays,
-  Lightbulb,
-  MessageSquare,
-  ShieldCheck,
-  Sparkles,
-  Stethoscope,
-  TrendingUp,
-  Users,
-} from 'lucide-react';
+import * as icons from '../../icons/icons';
 import { Icon } from './Icon';
 
-const ICONS = [
-  ['Sparkles', Sparkles],
-  ['Stethoscope', Stethoscope],
-  ['CalendarDays', CalendarDays],
-  ['ShieldCheck', ShieldCheck],
-  ['Lightbulb', Lightbulb],
-  ['Users', Users],
-  ['MessageSquare', MessageSquare],
-  ['TrendingUp', TrendingUp],
-] as const;
+const { Sparkles, ShieldCheck } = icons;
 
 const meta = {
   title: 'Marca/Icon',
@@ -38,17 +20,18 @@ type Story = StoryObj<typeof meta>;
 /** Traço em gradiente dourado: a marca dos ícones na identidade escura. */
 export const Dourado: Story = {};
 
+/** O conjunto `icons` da biblioteca: ícones lucide escolhidos para saúde, gestão e navegação. */
 export const Biblioteca: Story = {
   render: (args) => (
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(4, max-content)',
+        gridTemplateColumns: 'repeat(6, max-content)',
         gap: 24,
         justifyItems: 'center',
       }}
     >
-      {ICONS.map(([name, icon]) => (
+      {Object.entries(icons).map(([name, icon]) => (
         <div key={name} style={{ display: 'grid', gap: 8, justifyItems: 'center', fontSize: 12 }}>
           <Icon {...args} icon={icon} />
           <span>{name}</span>

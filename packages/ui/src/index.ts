@@ -3,6 +3,9 @@ export { tokens, mediaQuery, GOLD_ICON_STOPS } from './tokens/tokens';
 export type { Tokens, Breakpoint } from './tokens/tokens';
 export { cx } from './utils/cx';
 export type { ClassValue } from './utils/cx';
+/** Conjunto de ícones da marca (lucide-react): `<Icon icon={icons.Sparkles} tone="gold" />`. */
+export * as icons from './icons/icons';
+export type { LucideIcon } from 'lucide-react';
 
 export * from './components/Logo';
 export * from './components/Icon';

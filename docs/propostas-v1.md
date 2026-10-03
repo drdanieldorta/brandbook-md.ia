@@ -24,7 +24,7 @@ Status: **proposta, adotada como padrão da biblioteca por decisão do propriet�
 Regras adotadas:
 
 - Ação principal: gradiente dourado com texto escuro; secundária com contorno off-white; discreta em azul clareado.
-- Ícones de marca (`Icon tone="gold"`): traço em gradiente dourado dentro do próprio SVG; ícones semânticos (sucesso, erro) mantêm as cores de estado.
+- Ícones de marca (`Icon tone="gold"`): traço em gradiente dourado dentro do próprio SVG; ícones semânticos (sucesso, erro) mantêm as cores de estado. O conjunto `icons` (43 ícones lucide para saúde, gestão e navegação) é exportado pela biblioteca.
 - Kicker (`Eyebrow`): caixa alta de 13px com ponto roxo (azul) ou dourado.
 - Logo: variante limpa no cabeçalho e no rodapé escuros, mestre com brilho no herói; off-white quando o contraste pedir.
 - O azul-noite `#102B50` deixa de ser o fundo escuro e permanece cor de marca (lettering do logo e tema claro).

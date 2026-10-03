@@ -50,6 +50,7 @@ export function Chamada() {
 
 - Uma única folha de estilo: `@mdia/ui/styles.css` (fontes Inter, tokens `--mdia-*`, base e componentes). Também disponíveis `@mdia/ui/tokens.css` e `@mdia/ui/tokens.json`.
 - Tema escuro é o padrão. Tema claro do guia por escopo: `className="mdia-light"` ou `data-theme="light"`.
+- Ícones: `icons` (conjunto lucide da marca) com `Icon` para o traço em gradiente dourado; `ThemeScope` para áreas no tema claro ou escuro.
 - Convenções para criar componentes: `packages/ui/CONTRIBUTING.md`.
 
 ## Publicação
