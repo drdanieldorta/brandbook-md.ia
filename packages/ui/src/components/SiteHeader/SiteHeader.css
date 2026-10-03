@@ -103,16 +103,6 @@
   text-underline-offset: 0.4em;
 }
 
-/* Tom escuro: hover branco e acento de apoio dourado na página atual (guia §4). */
-[data-theme='dark'] .mdia-site-header__link:hover,
-.mdia-dark .mdia-site-header__link:hover {
-  color: var(--mdia-color-white);
-}
-[data-theme='dark'] .mdia-site-header__link[aria-current='page'],
-.mdia-dark .mdia-site-header__link[aria-current='page'] {
-  text-decoration-color: var(--mdia-color-gold);
-}
-
 /* Chamada para ação: no painel móvel fica ao fim da lista, separada por borda. */
 .mdia-site-header__cta {
   display: flex;

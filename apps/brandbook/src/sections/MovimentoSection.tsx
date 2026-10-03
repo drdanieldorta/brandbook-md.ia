@@ -13,6 +13,7 @@ export function MovimentoSection() {
     >
       <Stack gap={7}>
         <SectionIntro
+          eyebrow="06 · Movimento"
           id="movimento-titulo"
           title="Movimento"
           lead="Animar uma vez, sem flashes nem ciclos contínuos. Transições de feedback de 180 ms, entradas de 400 ms, sempre com a mesma curva."

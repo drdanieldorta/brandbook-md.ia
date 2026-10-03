@@ -1,0 +1,33 @@
+/* Eyebrow (kicker do playbook, identidade v2): caixa alta curta acima de um título. */
+.mdia-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mdia-space-2);
+  margin: 0;
+  font-size: var(--mdia-font-size-eyebrow);
+  font-weight: var(--mdia-font-weight-semibold);
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mdia-color-blue);
+}
+
+.mdia-eyebrow--gold {
+  color: var(--mdia-color-gold);
+}
+
+.mdia-eyebrow--secondary {
+  color: var(--mdia-color-text-secondary);
+}
+
+.mdia-eyebrow__dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--mdia-radius-full);
+  background: var(--mdia-color-purple);
+}
+
+.mdia-eyebrow--gold .mdia-eyebrow__dot {
+  background: var(--mdia-gradient-gold);
+}

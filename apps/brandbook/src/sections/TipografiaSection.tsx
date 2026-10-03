@@ -24,6 +24,7 @@ export function TipografiaSection() {
     >
       <Stack gap={7}>
         <SectionIntro
+          eyebrow="04 · Tipografia"
           id="tipografia-titulo"
           title="Tipografia"
           lead="Inter embarcada (proposta v1), com Segoe UI e Arial do guia como fallback. Peso 600 para títulos e rótulos, 400 para o corpo; entrelinha 1,1 em títulos e 1,6 no corpo."

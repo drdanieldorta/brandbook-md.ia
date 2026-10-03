@@ -3,6 +3,8 @@ import type { ColorEntry } from '../content/brand';
 import {
   colorRules,
   contrastPairs,
+  goldGradient,
+  identityPalette,
   paletteGuide,
   paletteNeutrals,
   paletteSemantic,
@@ -47,13 +49,47 @@ export function CoresSection() {
     <Section id="cores" aria-labelledby="cores-titulo" spacing="lg" className="anchor-offset">
       <Stack gap={7}>
         <SectionIntro
+          eyebrow="03 · Cores"
           id="cores-titulo"
           title="Cores e contraste"
-          lead="Azul-noite e branco sustentam a leitura; azul vivo orienta a ação; dourado e roxo aparecem em pequenos gestos. Distribuição sugerida: 60% neutros, 30% azuis, 10% acentos."
+          lead="Na identidade escura, o carvão sustenta a leitura em off-white, o dourado marca ações e ícones, e o azul orienta links e kickers. No tema claro do guia: azul-noite e branco para leitura, azul vivo para a ação, dourado e roxo em pequenos gestos."
         />
+        <Stack gap={4}>
+          <Heading level={3} size="heading">
+            Identidade escura (proposta v2)
+          </Heading>
+          <Text measure>
+            Carvão em três camadas, texto off-white e dourado em gradiente, derivados do playbook
+            MD.IA. É o tema padrão da biblioteca; a paleta clara do guia continua disponível por
+            escopo.
+          </Text>
+          <Card padding="sm">
+            <Stack gap={3}>
+              <div
+                className="swatch__color"
+                style={{ background: goldGradient }}
+                aria-hidden="true"
+              />
+              <Stack gap={1}>
+                <Stack direction="row" gap={2} align="center" wrap>
+                  <Text weight="semibold">Gradiente dourado</Text>
+                  <StatusBadge status="proposta" />
+                </Stack>
+                <Text size="sm" tone="secondary">
+                  <code>gradients.gold</code> · botão principal, ícones e linhas; texto sobre ele em{' '}
+                  <code>#17130D</code>.
+                </Text>
+              </Stack>
+            </Stack>
+          </Card>
+        </Stack>
+        <Swatches title="Camadas e texto da identidade escura" entries={identityPalette} />
         <Swatches title="Paleta sólida de apoio (guia 4.0)" entries={paletteGuide} />
         <Swatches title="Neutros de interface" entries={paletteNeutrals} />
-        <Swatches title="Estados e superfícies escuras (propostas v1)" entries={paletteSemantic} />
+        <Swatches
+          title="Estados semânticos no tema claro (proposta v1)"
+          entries={paletteSemantic}
+        />
 
         <Stack gap={4}>
           <Heading level={3} size="heading">

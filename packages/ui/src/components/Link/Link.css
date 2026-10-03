@@ -18,14 +18,10 @@
   outline-offset: 2px;
 }
 
-.mdia-link--inverse,
-[data-theme='dark'] .mdia-link,
-.mdia-dark .mdia-link {
+.mdia-link--inverse {
   color: var(--mdia-color-text-on-dark);
 }
 
-.mdia-link--inverse:hover,
-[data-theme='dark'] .mdia-link:hover,
-.mdia-dark .mdia-link:hover {
+.mdia-link--inverse:hover {
   color: var(--mdia-color-white);
 }

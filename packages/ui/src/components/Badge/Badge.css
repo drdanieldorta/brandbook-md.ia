@@ -53,15 +53,15 @@
   background: var(--mdia-color-error-bg);
   color: var(--mdia-color-error);
 }
-/* Dourado sobre azul-noite: o par do guia que passa em contraste (§4). */
+/* Dourado sobre fundo escuro: azul-noite no tema claro (par do guia §4), carvão elevado no escuro. */
 .mdia-badge--soft.mdia-badge--gold {
-  background: var(--mdia-color-navy);
+  background: var(--mdia-color-gold-soft-bg);
   color: var(--mdia-color-gold);
 }
 
-/* Sólido: fundo no tom + texto branco. */
+/* Sólido: fundo no tom + texto de contraste (branco no claro, carvão no escuro). */
 .mdia-badge--solid {
-  color: var(--mdia-color-white);
+  color: var(--mdia-color-on-status);
 }
 .mdia-badge--solid.mdia-badge--neutral {
   background: var(--mdia-color-text-secondary);
@@ -80,7 +80,7 @@
 }
 .mdia-badge--solid.mdia-badge--gold {
   background: var(--mdia-color-gold);
-  color: var(--mdia-color-navy);
+  color: var(--mdia-color-on-gold);
 }
 
 /* Contorno: borda 1px e texto no tom, sem fundo. */
@@ -107,23 +107,4 @@
 .mdia-badge--outline.mdia-badge--gold {
   border-color: var(--mdia-color-gold);
   color: var(--mdia-color-text);
-}
-
-/* Tema escuro: os tons semânticos clareiam, então o texto do sólido vira
-   azul-noite; o azul vivo não muda e fica ilegível sobre azul-noite, então
-   o tom brand herda a cor de texto; o dourado suave usa o navy mais escuro
-   para não sumir na superfície. */
-[data-theme='dark'] .mdia-badge--soft.mdia-badge--brand,
-.mdia-dark .mdia-badge--soft.mdia-badge--brand,
-[data-theme='dark'] .mdia-badge--outline.mdia-badge--brand,
-.mdia-dark .mdia-badge--outline.mdia-badge--brand {
-  color: var(--mdia-color-text);
-}
-[data-theme='dark'] .mdia-badge--soft.mdia-badge--gold,
-.mdia-dark .mdia-badge--soft.mdia-badge--gold {
-  background: var(--mdia-color-navy-800);
-}
-[data-theme='dark'] .mdia-badge--solid:not(.mdia-badge--brand):not(.mdia-badge--gold),
-.mdia-dark .mdia-badge--solid:not(.mdia-badge--brand):not(.mdia-badge--gold) {
-  color: var(--mdia-color-navy);
 }

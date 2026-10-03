@@ -38,7 +38,7 @@ export const Padrao: Story = {};
  */
 export const Variantes: Story = {
   render: (args) => (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, auto)', gap: 16 }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, max-content)', gap: 16 }}>
       {TONES.map(({ tone, label }) =>
         VARIANTS.map((variant) => (
           <Badge key={`${tone}-${variant}`} {...args} tone={tone} variant={variant}>
@@ -87,7 +87,12 @@ export const SobreFundoEscuro: Story = {
   render: (args) => (
     <div
       className="mdia-dark"
-      style={{ display: 'grid', gridTemplateColumns: 'repeat(3, auto)', gap: 16, padding: 24 }}
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, max-content)',
+        gap: 16,
+        padding: 24,
+      }}
     >
       {TONES.map(({ tone, label }) =>
         VARIANTS.map((variant) => (

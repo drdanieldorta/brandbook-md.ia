@@ -12,6 +12,7 @@ export function EspacamentoSection() {
     >
       <Stack gap={7}>
         <SectionIntro
+          eyebrow="05 · Espaçamento"
           id="espacamento-titulo"
           title="Espaçamento, raios e toque"
           lead="Escala completa do JSON: 4, 8, 12, 16, 24, 32, 48, 64 e 96 px. Preservar respiro, hierarquia e uma ideia por bloco."

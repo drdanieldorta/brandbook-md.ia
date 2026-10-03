@@ -1,50 +1,63 @@
 /* ==========================================================================
    MD.IA — tokens de design (@mdia/ui)
-   Fonte: guia 4.0 (docs/brandbook.md). Valores do guia são reproduzidos sem
-   alteração. O que o guia não define está marcado como PROPOSTA v1 e
-   consolidado em docs/propostas-v1.md para validação da marca.
+   Identidade escura (PROPOSTA v2, derivada do playbook MD.IA): carvão em
+   camadas, texto off-white e dourado em gradiente. É o padrão. O tema claro
+   do guia 4.0 (branco e gelo com azul-noite) fica em [data-theme='light'] e
+   .mdia-light. Os valores de marca do guia são preservados nos tokens
+   --mdia-brand-*; o que o guia não define está marcado como PROPOSTA.
    ========================================================================== */
 :root {
-  /* --- Paleta sólida de apoio (guia §4) --- */
-  --mdia-color-blue: #1761d8; /* azul vivo: ação e apoio de interface */
-  --mdia-color-blue-hover: #104dae; /* hover do botão principal (guia §7) */
-  --mdia-color-navy: #102b50; /* azul-noite: texto e fundos */
-  --mdia-color-gold: #c6a45c; /* dourado: acento de apoio (não usar em texto pequeno sobre branco) */
-  --mdia-color-purple: #8056c7; /* roxo: acentos, nós do logo, anel de foco */
-  --mdia-color-ice: #f3f6fa; /* gelo: superfícies */
-  --mdia-color-white: #ffffff;
-  --mdia-color-offwhite: #f5f3ee; /* logo monocromático off-white, texto sobre fundos escuros */
-  --mdia-color-black: #000000; /* logo monocromático preto */
+  /* --- Marca (guia §4, valores imutáveis) --- */
+  --mdia-brand-blue: #1761d8;
+  --mdia-brand-blue-hover: #104dae;
+  --mdia-brand-navy: #102b50;
+  --mdia-brand-gold: #c6a45c;
+  --mdia-brand-purple: #8056c7;
+  --mdia-brand-ice: #f3f6fa;
+  --mdia-brand-white: #ffffff;
+  --mdia-brand-offwhite: #f5f3ee;
+  --mdia-brand-black: #000000;
 
-  /* --- Neutros de interface (PROPOSTA v1: observados na demonstração do guia) --- */
-  --mdia-color-text: var(--mdia-color-navy);
-  --mdia-color-text-secondary: #57677b;
-  --mdia-color-text-disabled: #536278;
-  --mdia-color-border: #dde4ed;
-  --mdia-color-border-strong: #75849a; /* PROPOSTA v1: limites de controles de formulário, >= 3:1 sobre branco, gelo e azul-noite (WCAG 1.4.11) */
-  --mdia-color-surface: var(--mdia-color-white);
-  --mdia-color-surface-alt: var(--mdia-color-ice);
-  --mdia-color-surface-hover: #e9f0f9;
-  --mdia-color-surface-ghost-hover: #edf3fd;
-  --mdia-color-surface-disabled: #dde4ed;
-
-  /* --- Superfícies escuras (PROPOSTA v1: navy do guia + tons derivados) --- */
-  --mdia-color-navy-600: #1a3a66;
+  /* Cores de marca constantes nos dois temas */
+  --mdia-color-navy: var(--mdia-brand-navy);
+  --mdia-color-purple: var(--mdia-brand-purple);
+  --mdia-color-ice: var(--mdia-brand-ice);
+  --mdia-color-white: var(--mdia-brand-white);
+  --mdia-color-offwhite: var(--mdia-brand-offwhite);
+  --mdia-color-black: var(--mdia-brand-black);
+  --mdia-color-navy-600: #1a3a66; /* PROPOSTA v1: camadas sobre azul-noite */
   --mdia-color-navy-800: #0b1f3a;
-  --mdia-color-text-on-dark: var(--mdia-color-offwhite);
-  --mdia-color-text-secondary-on-dark: #b8c4d6;
-  --mdia-color-text-disabled-on-dark: #8d9bb0;
-  --mdia-color-border-on-dark: rgba(245, 243, 238, 0.18);
 
-  /* --- Estados semânticos (PROPOSTA v1; o guia não define paleta semântica) --- */
-  --mdia-color-success: #1e7b4e;
-  --mdia-color-success-bg: #e6f4ec;
-  --mdia-color-warning: #8a6a1f;
-  --mdia-color-warning-bg: #fbf4e3;
-  --mdia-color-error: #c0392b;
-  --mdia-color-error-bg: #fbeae7;
-  --mdia-color-info: var(--mdia-color-blue);
-  --mdia-color-info-bg: #e8f0fc;
+  /* --- Carvão e dourado da identidade escura (PROPOSTA v2) --- */
+  --mdia-color-charcoal-900: #0c0d0f; /* página */
+  --mdia-color-charcoal-800: #101114; /* faixa alternativa */
+  --mdia-color-charcoal-700: #17191d; /* painéis, cabeçalho, campos */
+  --mdia-color-charcoal-600: #202329; /* cards e elementos elevados */
+  --mdia-color-charcoal-500: #33363d; /* linhas */
+  --mdia-color-gold-light: #e3b777; /* dourado para texto e ícones sobre carvão */
+  --mdia-gradient-gold: linear-gradient(
+    115deg,
+    #d8aa6b 0%,
+    #f2c777 24%,
+    #fff1b6 42%,
+    #dca05e 63%,
+    #ffe5a2 82%,
+    #d8aa6b 100%
+  );
+  --mdia-gradient-gold-soft: linear-gradient(
+    115deg,
+    #e3b777 0%,
+    #fff1b6 42%,
+    #e9bc77 64%,
+    #ffe5a2 100%
+  );
+  --mdia-gradient-gold-line: linear-gradient(
+    90deg,
+    transparent,
+    rgba(170, 130, 74, 0.5),
+    transparent
+  );
+  --mdia-gradient-surface: linear-gradient(145deg, #191b20 0%, #101114 65%, #0c0d0f 100%);
 
   /* --- Tipografia (guia §5). Inter é PROPOSTA v1; Segoe UI/Arial do guia ficam como fallback --- */
   --mdia-font-family: 'Inter Variable', 'Segoe UI', Arial, sans-serif;
@@ -59,6 +72,7 @@
   --mdia-font-size-body-sm: 0.875rem; /* 14px */
   --mdia-font-size-label: 0.875rem; /* 14px */
   --mdia-font-size-caption: 0.75rem; /* 12px — PROPOSTA v1 */
+  --mdia-font-size-eyebrow: 0.8125rem; /* 13px — PROPOSTA v2 (kicker do playbook) */
   --mdia-line-height-heading: 1.1;
   --mdia-line-height-body: 1.6;
   --mdia-line-height-tight: 1.3; /* PROPOSTA v1: subtítulos e rótulos */
@@ -93,9 +107,9 @@
   --mdia-focus-ring-offset: 2px; /* PROPOSTA v1 */
 
   /* --- Elevação (PROPOSTA v1; sombra "lg" é a do toast da demonstração) --- */
-  --mdia-shadow-sm: 0 1px 2px rgba(16, 43, 80, 0.08);
-  --mdia-shadow-md: 0 4px 12px rgba(16, 43, 80, 0.12);
-  --mdia-shadow-lg: 0 6px 25px rgba(0, 0, 0, 0.13);
+  --mdia-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.24);
+  --mdia-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.32);
+  --mdia-shadow-lg: 0 6px 25px rgba(0, 0, 0, 0.45);
 
   /* --- Camadas (PROPOSTA v1) --- */
   --mdia-z-dropdown: 1000;
@@ -119,25 +133,78 @@
   --mdia-motion: var(--mdia-motion-feedback);
 }
 
-/* Tema escuro por escopo (PROPOSTA v1). Aplicar em <html>, em uma seção ou em um card. */
+/* --- Tema escuro: o padrão da identidade (PROPOSTA v2) e o escopo explícito --- */
+:root,
 [data-theme='dark'],
 .mdia-dark {
-  --mdia-color-text: var(--mdia-color-text-on-dark);
-  --mdia-color-text-secondary: var(--mdia-color-text-secondary-on-dark);
-  --mdia-color-text-disabled: var(--mdia-color-text-disabled-on-dark);
-  --mdia-color-border: var(--mdia-color-border-on-dark);
-  --mdia-color-surface: var(--mdia-color-navy);
-  --mdia-color-surface-alt: var(--mdia-color-navy-800);
-  --mdia-color-surface-hover: var(--mdia-color-navy-600);
-  --mdia-color-surface-ghost-hover: rgba(245, 243, 238, 0.08);
-  --mdia-color-surface-disabled: var(--mdia-color-navy-600);
+  color-scheme: dark;
+  --mdia-color-bg: var(--mdia-color-charcoal-900);
+  --mdia-color-surface: var(--mdia-color-charcoal-700);
+  --mdia-color-surface-alt: var(--mdia-color-charcoal-800);
+  --mdia-color-surface-raised: var(--mdia-color-charcoal-600);
+  --mdia-color-surface-hover: #262a31;
+  --mdia-color-surface-ghost-hover: rgba(241, 238, 232, 0.06);
+  --mdia-color-surface-disabled: #2a2e35;
+  --mdia-color-text: #f1eee8;
+  --mdia-color-text-secondary: #adb2bb;
+  --mdia-color-text-disabled: #7c8189;
+  --mdia-color-border: var(--mdia-color-charcoal-500);
+  --mdia-color-border-strong: #767c88; /* >= 3:1 sobre as três camadas (WCAG 1.4.11) */
+  --mdia-color-blue: #5f96e8; /* azul vivo clareado para 4,5:1 sobre carvão */
+  --mdia-color-blue-hover: #84aeec;
+  --mdia-color-gold: var(--mdia-color-gold-light);
+  --mdia-color-on-gold: #17130d; /* texto sobre o gradiente dourado */
+  --mdia-color-gold-soft-bg: var(--mdia-color-charcoal-600);
+  --mdia-color-primary-bg: var(--mdia-gradient-gold);
+  --mdia-color-primary-bg-hover: var(--mdia-gradient-gold-soft);
+  --mdia-color-primary-text: var(--mdia-color-on-gold);
+  --mdia-color-on-status: var(--mdia-color-charcoal-900);
   --mdia-color-success: #4cc38a;
   --mdia-color-success-bg: rgba(76, 195, 138, 0.14);
   --mdia-color-warning: #e3c06e;
   --mdia-color-warning-bg: rgba(227, 192, 110, 0.14);
   --mdia-color-error: #f08a7e;
   --mdia-color-error-bg: rgba(240, 138, 126, 0.14);
-  --mdia-color-info: #b8c4d6;
-  --mdia-color-info-bg: rgba(184, 196, 214, 0.14);
-  color-scheme: dark;
+  --mdia-color-info: #5f96e8;
+  --mdia-color-info-bg: rgba(95, 150, 232, 0.14);
+  /* compatibilidade com a v1 */
+  --mdia-color-text-on-dark: #f1eee8;
+  --mdia-color-text-secondary-on-dark: #adb2bb;
+  --mdia-color-text-disabled-on-dark: #7c8189;
+  --mdia-color-border-on-dark: var(--mdia-color-charcoal-500);
+}
+
+/* --- Tema claro: a paleta do guia 4.0, por escopo --- */
+[data-theme='light'],
+.mdia-light {
+  color-scheme: light;
+  --mdia-color-bg: var(--mdia-brand-white);
+  --mdia-color-surface: var(--mdia-brand-white);
+  --mdia-color-surface-alt: var(--mdia-brand-ice);
+  --mdia-color-surface-raised: var(--mdia-brand-white);
+  --mdia-color-surface-hover: #e9f0f9; /* observado na demonstração */
+  --mdia-color-surface-ghost-hover: #edf3fd;
+  --mdia-color-surface-disabled: #dde4ed;
+  --mdia-color-text: var(--mdia-brand-navy);
+  --mdia-color-text-secondary: #57677b;
+  --mdia-color-text-disabled: #536278;
+  --mdia-color-border: #dde4ed;
+  --mdia-color-border-strong: #75849a; /* PROPOSTA v1: limites de controles >= 3:1 */
+  --mdia-color-blue: var(--mdia-brand-blue);
+  --mdia-color-blue-hover: var(--mdia-brand-blue-hover);
+  --mdia-color-gold: var(--mdia-brand-gold);
+  --mdia-color-on-gold: var(--mdia-brand-navy);
+  --mdia-color-gold-soft-bg: var(--mdia-brand-navy);
+  --mdia-color-primary-bg: var(--mdia-brand-blue);
+  --mdia-color-primary-bg-hover: var(--mdia-brand-blue-hover);
+  --mdia-color-primary-text: var(--mdia-brand-white);
+  --mdia-color-on-status: var(--mdia-brand-white);
+  --mdia-color-success: #1e7b4e;
+  --mdia-color-success-bg: #e6f4ec;
+  --mdia-color-warning: #8a6a1f;
+  --mdia-color-warning-bg: #fbf4e3;
+  --mdia-color-error: #c0392b;
+  --mdia-color-error-bg: #fbeae7;
+  --mdia-color-info: var(--mdia-brand-blue);
+  --mdia-color-info-bg: #e8f0fc;
 }

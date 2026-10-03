@@ -33,6 +33,9 @@
 .mdia-tone-error {
   color: var(--mdia-color-error);
 }
+.mdia-tone-gold {
+  color: var(--mdia-color-gold);
+}
 
 .mdia-align-start {
   text-align: start;

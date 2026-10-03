@@ -24,6 +24,7 @@ export function AplicacoesSection() {
     >
       <Stack gap={7}>
         <SectionIntro
+          eyebrow="09 · Aplicações"
           id="aplicacoes-titulo"
           title="Aplicações existentes"
           lead="Modelos SVG editáveis de slide, post e cartão. Priorizam a variante sem halo e usam textos sugeridos, sem contatos inventados."

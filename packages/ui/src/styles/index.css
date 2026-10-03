@@ -6,6 +6,8 @@
 @import './utilities.css';
 
 @import '../components/Logo/Logo.css';
+@import '../components/Icon/Icon.css';
+@import '../components/Eyebrow/Eyebrow.css';
 @import '../components/Heading/Heading.css';
 @import '../components/Text/Text.css';
 @import '../components/Link/Link.css';

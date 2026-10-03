@@ -19,7 +19,7 @@ body {
   font-size: var(--mdia-font-size-body);
   line-height: var(--mdia-line-height-body);
   color: var(--mdia-color-text);
-  background: var(--mdia-color-surface);
+  background: var(--mdia-color-bg);
 }
 
 h1,
@@ -70,11 +70,13 @@ a {
   background: rgba(23, 97, 216, 0.22);
 }
 
-/* Superfície escura por escopo (ver tokens.css). */
+/* Escopos de tema (ver tokens.css): pintam fundo e texto do próprio tema. */
 [data-theme='dark'],
-.mdia-dark {
+.mdia-dark,
+[data-theme='light'],
+.mdia-light {
   color: var(--mdia-color-text);
-  background: var(--mdia-color-surface);
+  background: var(--mdia-color-bg);
 }
 
 /* Movimento reduzido (guia §10): animações e transições desativadas. */

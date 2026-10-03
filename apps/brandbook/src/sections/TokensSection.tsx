@@ -33,6 +33,7 @@ export function TokensSection() {
     <Section id="tokens" aria-labelledby="tokens-titulo" spacing="lg" className="anchor-offset">
       <Stack gap={7}>
         <SectionIntro
+          eyebrow="11 · Tokens"
           id="tokens-titulo"
           title="Tokens e uso em código"
           lead="Uma folha de estilo única com fontes, variáveis --mdia-* e componentes. Os nomes originais do guia (--mdia-blue, --mdia-font, --mdia-radius…) continuam válidos como aliases."
@@ -50,7 +51,8 @@ export function TokensSection() {
                 <code>{SNIPPET}</code>
               </pre>
               <Text size="sm" tone="secondary">
-                Tema escuro por escopo: envolva uma área com <code>className="mdia-dark"</code>.
+                O tema escuro é o padrão. Para o tema claro do guia, envolva uma área com{' '}
+                <code>className="mdia-light"</code> ou use <code>data-theme="light"</code>.
               </Text>
             </Stack>
           </Card>
@@ -100,6 +102,14 @@ export function TokensSection() {
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>Identidade escura (proposta v2)</td>
+                <td>
+                  {Object.entries(tokens.identity)
+                    .map(([k, v]) => `${k}: ${v}`)
+                    .join(' · ')}
+                </td>
+              </tr>
               <tr>
                 <td>Cores do guia</td>
                 <td>

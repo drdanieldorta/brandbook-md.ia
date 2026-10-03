@@ -21,6 +21,11 @@ export const Limpo: Story = {};
 export const MestreComBrilho: Story = {
   args: { variant: 'mestre' },
   globals: { backgrounds: { value: 'escuro' } },
+  render: (args) => (
+    <div className="mdia-dark" style={{ display: 'inline-block', padding: 32, borderRadius: 16 }}>
+      <Logo {...args} />
+    </div>
+  ),
 };
 
 /** Todas as variantes sobre o fundo que o guia indica para cada uma. */

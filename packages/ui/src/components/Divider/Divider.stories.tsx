@@ -98,3 +98,14 @@ export const SobreFundoEscuro: Story = {
     </div>
   ),
 };
+
+/** Linha em gradiente dourado que se dissolve nas pontas (identidade v2). */
+export const Dourado: Story = {
+  args: { tone: 'gold' },
+  render: (args) => (
+    <div style={{ width: 480 }}>
+      <Divider {...args} />
+      <Divider {...args} label="ou" />
+    </div>
+  ),
+};

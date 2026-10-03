@@ -14,6 +14,7 @@ export function StatusSection() {
     >
       <Stack gap={7}>
         <SectionIntro
+          eyebrow="10 · Status"
           id="status-titulo"
           title="Status, diferenças e lacunas"
           lead="Esta implementação preserva o status da fonte: identidade fornecida e recomendações propostas. Não constitui nova aprovação da marca."

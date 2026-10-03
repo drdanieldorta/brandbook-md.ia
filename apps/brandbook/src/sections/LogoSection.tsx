@@ -22,6 +22,12 @@ import { SectionIntro } from '../components/SectionIntro';
 const DARK: ReadonlySet<LogoVariant> = new Set(['mestre', 'offwhite', 'branco']);
 const ICE: ReadonlySet<LogoVariant> = new Set(['limpo', 'referencia', 'monocromatico']);
 
+function frameClass(variant: LogoVariant): string {
+  if (DARK.has(variant)) return 'logo-figure__frame';
+  if (ICE.has(variant)) return 'logo-figure__frame logo-figure__frame--ice mdia-light';
+  return 'logo-figure__frame logo-figure__frame--light mdia-light';
+}
+
 export function LogoSection() {
   return (
     <Section
@@ -33,6 +39,7 @@ export function LogoSection() {
     >
       <Stack gap={7}>
         <SectionIntro
+          eyebrow="02 · Logo"
           id="logo-titulo"
           title="Logo e ativos de identidade"
           lead="Reconstruções vetoriais controladas da referência final. Os componentes Logo e LogoMark renderizam os SVGs oficiais sem alterar geometria, gradientes ou filtro."
@@ -41,9 +48,7 @@ export function LogoSection() {
         <Grid minItemWidth="300px" gap={5}>
           {LOGO_VARIANTS.map((variant) => (
             <figure key={variant} className="logo-figure">
-              <div
-                className={`logo-figure__frame${DARK.has(variant) ? ' logo-figure__frame--dark' : ICE.has(variant) ? ' logo-figure__frame--ice' : ''}`}
-              >
+              <div className={frameClass(variant)}>
                 <Logo variant={variant} width="100%" title={LOGO_VARIANT_INFO[variant].label} />
               </div>
               <figcaption>

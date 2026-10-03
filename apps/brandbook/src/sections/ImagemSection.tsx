@@ -14,6 +14,7 @@ export function ImagemSection() {
     >
       <Stack gap={7}>
         <SectionIntro
+          eyebrow="08 · Fotografia e 3D"
           id="imagem-titulo"
           title="Fotografia e linguagem 3D"
           lead="Pessoas antes da tecnologia. Volume com sobriedade: azul fosco, metal dourado acetinado e pontos roxos."

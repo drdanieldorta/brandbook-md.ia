@@ -2,7 +2,15 @@ import type { ElementType, HTMLAttributes } from 'react';
 import { cx } from '../../utils/cx';
 
 export type TextTone =
-  'default' | 'secondary' | 'disabled' | 'inverse' | 'brand' | 'success' | 'warning' | 'error';
+  | 'default'
+  | 'secondary'
+  | 'disabled'
+  | 'inverse'
+  | 'brand'
+  | 'gold'
+  | 'success'
+  | 'warning'
+  | 'error';
 export type TextAlign = 'start' | 'center' | 'end';
 export type TextSize = 'lg' | 'md' | 'sm' | 'caption';
 export type TextWeight = 'regular' | 'semibold';

@@ -1,5 +1,5 @@
 import { ArrowRight, BookOpen } from 'lucide-react';
-import { Badge, ButtonLink, Hero, Logo, SiteFooter, SiteHeader } from '@mdia/ui';
+import { ButtonLink, Eyebrow, Hero, Logo, SiteFooter, SiteHeader } from '@mdia/ui';
 import { sections } from './content/brand';
 import { REPO_URL, STORYBOOK_URL } from './lib/assets';
 import { AplicacoesSection } from './sections/AplicacoesSection';
@@ -50,11 +50,8 @@ export function App() {
       />
       <main id="conteudo">
         <Hero
-          eyebrow={
-            <Badge tone="gold" variant="soft">
-              Brandbook · Guia 4.0
-            </Badge>
-          }
+          className="hero-gradient"
+          eyebrow={<Eyebrow tone="gold">Brandbook · Guia 4.0 · Identidade v2</Eyebrow>}
           title="Inteligência humana. Potencial ampliado."
           lead="Identidade, tokens e componentes da MD.IA, prontos para usar em código. Os valores do guia são preservados; o que o guia não define está marcado como proposta."
           actions={

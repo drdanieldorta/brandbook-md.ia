@@ -29,14 +29,15 @@
   outline-offset: var(--mdia-focus-ring-offset);
 }
 
-/* Principal: azul vivo, texto branco, hover #104DAE (guia §7). */
+/* Principal: gradiente dourado com texto escuro na identidade escura (proposta v2);
+   azul vivo com texto branco e hover #104DAE no tema claro (guia §7). */
 .mdia-button--primary {
-  background: var(--mdia-color-blue);
-  color: var(--mdia-color-white);
+  background: var(--mdia-color-primary-bg);
+  color: var(--mdia-color-primary-text);
 }
 .mdia-button--primary:hover:not(:disabled):not([aria-disabled='true']),
 .mdia-button--primary:active:not(:disabled):not([aria-disabled='true']) {
-  background: var(--mdia-color-blue-hover);
+  background: var(--mdia-color-primary-bg-hover);
 }
 
 /* Secundário: superfície com borda e texto azul-noite. */
@@ -58,10 +59,6 @@
 .mdia-button--ghost:hover:not(:disabled):not([aria-disabled='true']),
 .mdia-button--ghost:active:not(:disabled):not([aria-disabled='true']) {
   background: var(--mdia-color-surface-ghost-hover);
-}
-[data-theme='dark'] .mdia-button--ghost,
-.mdia-dark .mdia-button--ghost {
-  color: var(--mdia-color-text-on-dark);
 }
 
 /* Desabilitado: sem interação (guia §7). */

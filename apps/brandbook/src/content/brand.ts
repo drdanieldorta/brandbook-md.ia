@@ -227,6 +227,75 @@ export const paletteNeutrals: ColorEntry[] = [
   },
 ];
 
+export const identityPalette: ColorEntry[] = [
+  {
+    token: 'identity.bg',
+    nome: 'Carvão 900',
+    hex: '#0C0D0F',
+    papel: 'Fundo da página.',
+    status: 'proposta',
+  },
+  {
+    token: 'identity.surfaceAlt',
+    nome: 'Carvão 800',
+    hex: '#101114',
+    papel: 'Faixas alternativas.',
+    status: 'proposta',
+  },
+  {
+    token: 'identity.surface',
+    nome: 'Carvão 700',
+    hex: '#17191D',
+    papel: 'Cabeçalho, painéis e campos.',
+    status: 'proposta',
+  },
+  {
+    token: 'identity.surfaceRaised',
+    nome: 'Carvão 600',
+    hex: '#202329',
+    papel: 'Cards e elementos elevados.',
+    status: 'proposta',
+  },
+  {
+    token: 'identity.line',
+    nome: 'Linha',
+    hex: '#33363D',
+    papel: 'Bordas e divisores.',
+    status: 'proposta',
+  },
+  {
+    token: 'identity.text',
+    nome: 'Texto',
+    hex: '#F1EEE8',
+    papel: 'Leitura sobre carvão.',
+    status: 'proposta',
+  },
+  {
+    token: 'identity.textSecondary',
+    nome: 'Texto secundário',
+    hex: '#ADB2BB',
+    papel: 'Informação de apoio.',
+    status: 'proposta',
+  },
+  {
+    token: 'identity.blue',
+    nome: 'Azul sobre carvão',
+    hex: '#5F96E8',
+    papel: 'Links, kickers e ações discretas.',
+    status: 'proposta',
+  },
+  {
+    token: 'identity.gold',
+    nome: 'Dourado sobre carvão',
+    hex: '#E3B777',
+    papel: 'Ícones, numerais e acentos.',
+    status: 'proposta',
+  },
+];
+
+export const goldGradient =
+  'linear-gradient(115deg, #D8AA6B 0%, #F2C777 24%, #FFF1B6 42%, #DCA05E 63%, #FFE5A2 82%, #D8AA6B 100%)';
+
 export const paletteSemantic: ColorEntry[] = [
   {
     token: 'semantic.success',
@@ -256,27 +325,6 @@ export const paletteSemantic: ColorEntry[] = [
     papel: 'Fundo #E8F0FC. Reaproveita o azul vivo.',
     status: 'proposta',
   },
-  {
-    token: 'dark.navy800',
-    nome: 'Azul-noite 800',
-    hex: '#0B1F3A',
-    papel: 'Camada mais escura em superfícies escuras.',
-    status: 'proposta',
-  },
-  {
-    token: 'dark.navy600',
-    nome: 'Azul-noite 600',
-    hex: '#1A3A66',
-    papel: 'Camada mais clara em superfícies escuras.',
-    status: 'proposta',
-  },
-  {
-    token: 'dark.textSecondaryOnDark',
-    nome: 'Secundário sobre escuro',
-    hex: '#B8C4D6',
-    papel: 'Texto de apoio sobre azul-noite.',
-    status: 'proposta',
-  },
 ];
 
 export interface ContrastPair {
@@ -287,6 +335,22 @@ export interface ContrastPair {
 }
 
 export const contrastPairs: ContrastPair[] = [
+  {
+    nome: 'Off-white sobre carvão',
+    fg: '#F1EEE8',
+    bg: '#0C0D0F',
+    nota: 'Texto da identidade escura.',
+  },
+  { nome: 'Texto secundário sobre painel', fg: '#ADB2BB', bg: '#17191D' },
+  { nome: 'Azul clareado sobre carvão', fg: '#5F96E8', bg: '#0C0D0F', nota: 'Links e kickers.' },
+  {
+    nome: 'Azul vivo do guia sobre carvão',
+    fg: '#1761D8',
+    bg: '#0C0D0F',
+    nota: 'Por isso o azul clareia no escuro.',
+  },
+  { nome: 'Dourado sobre painel', fg: '#E3B777', bg: '#17191D', nota: 'Ícones e numerais.' },
+  { nome: 'Texto escuro sobre dourado', fg: '#17130D', bg: '#E3B777', nota: 'Botão principal.' },
   { nome: 'Branco sobre azul vivo', fg: '#FFFFFF', bg: '#1761D8', nota: 'Botão principal.' },
   { nome: 'Branco sobre azul-noite', fg: '#FFFFFF', bg: '#102B50' },
   {
@@ -417,6 +481,7 @@ export const motion = {
 
 export const componentRules = {
   botoes: [
+    'Identidade escura (proposta v2): ação principal em gradiente dourado com texto escuro; o azul fica para links e ações discretas.',
     'Uma ação principal por contexto; rótulo com verbo claro.',
     'Área de toque mínima de 44 × 44 px. Raio 8 px. Foco sempre visível (contorno de 3 px).',
     'Principal: fundo azul #1761D8, texto branco; hover #104DAE.',
@@ -522,6 +587,11 @@ export const openGaps = [
 ];
 
 export const proposalsSummary = [
+  {
+    tema: 'Identidade escura (v2)',
+    proposta:
+      'Carvão em camadas, dourado em gradiente e azul clareado como padrão, inspirados no playbook. Tema claro do guia disponível por escopo.',
+  },
   {
     tema: 'Tipografia',
     proposta: 'Inter embarcada (SIL OFL); níveis heading 24, subheading 20, legenda 12.',

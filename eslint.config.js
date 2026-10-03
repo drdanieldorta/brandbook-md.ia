@@ -15,6 +15,7 @@ export default tseslint.config(
       '**/storybook-static/**',
       '**/node_modules/**',
       '.ds-sync/**',
+      '.design-sync/**',
       'ds-bundle/**',
       '**/*.generated.ts',
       'public/**',

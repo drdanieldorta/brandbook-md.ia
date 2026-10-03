@@ -1,3 +1,4 @@
+import { Lightbulb, ShieldCheck, Users } from 'lucide-react';
 import {
   Alert,
   Badge,
@@ -6,6 +7,7 @@ import {
   CardHeader,
   Grid,
   Heading,
+  Icon,
   Section,
   Stack,
   Text,
@@ -13,23 +15,31 @@ import {
 import { essence } from '../content/brand';
 import { SectionIntro } from '../components/SectionIntro';
 
+const PRINCIPLE_ICONS = [Lightbulb, ShieldCheck, Users] as const;
+
 export function EssenciaSection() {
   return (
     <Section id="essencia" aria-labelledby="essencia-titulo" spacing="lg" className="anchor-offset">
       <Stack gap={7}>
         <SectionIntro
+          eyebrow="01 · Essência"
           id="essencia-titulo"
           title="Essência e linguagem verbal"
           lead={essence.atuacao}
         />
 
         <Grid minItemWidth="260px" gap={5}>
-          {essence.principios.map((p) => (
-            <Card key={p.nome} tone="alt" padding="lg">
+          {essence.principios.map((p, i) => (
+            <Card key={p.nome} padding="lg">
               <CardHeader>
-                <Heading level={3} size="heading">
-                  {p.nome}
-                </Heading>
+                <Stack direction="row" gap={3} align="center">
+                  <span className="principle-icon">
+                    <Icon icon={PRINCIPLE_ICONS[i] ?? Lightbulb} tone="gold" size={28} />
+                  </span>
+                  <Heading level={3} size="heading">
+                    {p.nome}
+                  </Heading>
+                </Stack>
               </CardHeader>
               <CardBody>
                 <Text>{p.regra}</Text>

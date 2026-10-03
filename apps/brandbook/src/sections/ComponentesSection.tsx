@@ -128,6 +128,7 @@ export function ComponentesSection() {
       <Stack gap={7}>
         <Stack gap={4}>
           <SectionIntro
+            eyebrow="07 · Componentes"
             id="componentes-titulo"
             title="Componentes e estados"
             lead="Todos os exemplos abaixo são os componentes reais de @mdia/ui. O catálogo completo, com cada variante e estado, está no Storybook."
@@ -267,21 +268,20 @@ export function ComponentesSection() {
                 </Button>
               </CardFooter>
             </Card>
-            <Card tone="dark" elevated>
+            <Card className="mdia-light" elevated>
               <CardHeader>
                 <Heading level={4} size="subheading">
-                  Sobre fundo escuro
+                  Tema claro por escopo
                 </Heading>
               </CardHeader>
               <CardBody>
                 <Text size="sm">
-                  Os componentes trocam de tokens automaticamente dentro de uma superfície escura.
+                  A paleta do guia 4.0 continua disponível: basta envolver uma área com a classe de
+                  tema claro.
                 </Text>
               </CardBody>
               <CardFooter>
-                <Button variant="secondary" size="sm">
-                  Agendar conversa
-                </Button>
+                <Button size="sm">Agendar conversa</Button>
               </CardFooter>
             </Card>
           </Grid>

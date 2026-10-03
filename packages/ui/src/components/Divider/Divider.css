@@ -68,3 +68,26 @@
   border-top: 0;
   border-left: 1px solid var(--mdia-color-border);
 }
+
+/* Dourado (identidade v2): linha em gradiente que se dissolve nas pontas. */
+.mdia-divider--gold {
+  height: 1px;
+  border-top: 0;
+  background: var(--mdia-gradient-gold-line);
+}
+.mdia-divider--gold.mdia-divider--vertical {
+  width: 1px;
+  height: auto;
+  border-left: 0;
+  background: linear-gradient(180deg, transparent, rgba(170, 130, 74, 0.5), transparent);
+}
+.mdia-divider--gold.mdia-divider--labeled {
+  height: auto;
+  background: none;
+}
+.mdia-divider--gold.mdia-divider--labeled::before,
+.mdia-divider--gold.mdia-divider--labeled::after {
+  height: 1px;
+  border-top: 0;
+  background: var(--mdia-gradient-gold-line);
+}

@@ -12,6 +12,7 @@ Identidade visual da MD.IA (consultoria e mentoria em inteligência artificial p
 ## Princípios
 
 - **O guia 4.0 manda.** Cores, tipografia, espaçamento, raios, movimento, área de toque e foco vêm de `docs/brandbook.md` sem alteração.
+- **Identidade escura por padrão (proposta v2).** Carvão em camadas, dourado em gradiente e azul clareado, derivados do playbook MD.IA. O tema claro do guia 4.0 fica disponível por escopo (`data-theme="light"` ou `className="mdia-light"`). Detalhes e contrastes em `docs/propostas-v1.md`.
 - **Lacunas viram propostas, nunca fatos.** O que o guia não define (estados semânticos, elevação, breakpoints, tema escuro, fonte embarcada) está rotulado como _proposta v1_ em `docs/propostas-v1.md` e em `tokens.json → proposals`, aguardando validação da marca.
 - **O logo é intocável.** `Logo` e `LogoMark` renderizam os SVGs oficiais sem alterar geometria, gradientes ou filtro. Testes garantem que todos os paths originais continuam presentes.
 
@@ -48,7 +49,7 @@ export function Chamada() {
 ```
 
 - Uma única folha de estilo: `@mdia/ui/styles.css` (fontes Inter, tokens `--mdia-*`, base e componentes). Também disponíveis `@mdia/ui/tokens.css` e `@mdia/ui/tokens.json`.
-- Tema escuro por escopo: envolva uma área com `className="mdia-dark"` (ou `data-theme="dark"`).
+- Tema escuro é o padrão. Tema claro do guia por escopo: `className="mdia-light"` ou `data-theme="light"`.
 - Convenções para criar componentes: `packages/ui/CONTRIBUTING.md`.
 
 ## Publicação

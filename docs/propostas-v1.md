@@ -1,4 +1,33 @@
-# Propostas v1 — valores que o guia 4.0 não define
+# Propostas v2 e v1 — valores que o guia 4.0 não define
+
+## Proposta v2 — identidade escura (playbook MD.IA)
+
+Status: **proposta, adotada como padrão da biblioteca por decisão do proprietário da marca (outubro de 2026)**. Derivada do playbook "Crie slides no ChatGPT". O tema claro do guia 4.0 continua disponível por escopo (`data-theme="light"` ou `.mdia-light`), e os valores de marca do guia permanecem intactos nos tokens `--mdia-brand-*`.
+
+| Papel                                   | Valor                                                                                                   | Contraste (WCAG)                                                                     |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Página (carvão 900)                     | `#0C0D0F`                                                                                               | —                                                                                    |
+| Faixa alternativa (carvão 800)          | `#101114`                                                                                               | —                                                                                    |
+| Painéis, cabeçalho, campos (carvão 700) | `#17191D`                                                                                               | —                                                                                    |
+| Cards e elementos elevados (carvão 600) | `#202329`                                                                                               | —                                                                                    |
+| Linhas                                  | `#33363D`                                                                                               | só divisores e cards                                                                 |
+| Borda de controles                      | `#767C88`                                                                                               | 3,8:1 sobre carvão 600; 4,2:1 sobre 700; 4,6:1 sobre 900                             |
+| Texto                                   | `#F1EEE8`                                                                                               | 13,6:1 a 16,8:1                                                                      |
+| Texto secundário                        | `#ADB2BB`                                                                                               | 7,4:1 a 9,1:1                                                                        |
+| Texto desabilitado                      | `#7C8189`                                                                                               | 4,0:1 a 5,0:1 (inativo)                                                              |
+| Azul sobre carvão                       | `#5F96E8` (hover `#84AEEC`)                                                                             | 5,3:1 a 6,5:1; o azul vivo do guia `#1761D8` fica em 2,8:1 a 3,5:1, por isso clareia |
+| Dourado sobre carvão                    | `#E3B777`                                                                                               | 8,5:1 a 10,5:1                                                                       |
+| Texto sobre o gradiente dourado         | `#17130D`                                                                                               | 8,1:1 a 16,3:1 nas paradas do gradiente                                              |
+| Gradiente dourado                       | `linear-gradient(115deg, #D8AA6B 0%, #F2C777 24%, #FFF1B6 42%, #DCA05E 63%, #FFE5A2 82%, #D8AA6B 100%)` | botão principal, linhas e ícones (traço)                                             |
+| Estados no escuro                       | sucesso `#4CC38A`, alerta `#E3C06E`, erro `#F08A7E`, informação `#5F96E8`                               | 5,8:1 a 11,1:1                                                                       |
+
+Regras adotadas:
+
+- Ação principal: gradiente dourado com texto escuro; secundária com contorno off-white; discreta em azul clareado.
+- Ícones de marca (`Icon tone="gold"`): traço em gradiente dourado dentro do próprio SVG; ícones semânticos (sucesso, erro) mantêm as cores de estado.
+- Kicker (`Eyebrow`): caixa alta de 13px com ponto roxo (azul) ou dourado.
+- Logo: variante limpa no cabeçalho e no rodapé escuros, mestre com brilho no herói; off-white quando o contraste pedir.
+- O azul-noite `#102B50` deixa de ser o fundo escuro e permanece cor de marca (lettering do logo e tema claro).
 
 Status: **proposta, aguardando validação da marca**. Nada aqui altera um valor do guia; tudo preenche lacunas listadas em `brandbook.md` §13 ("Lacunas que permanecem abertas"). Cada item está marcado como proposta em `packages/ui/src/tokens/tokens.css` e em `tokens.json → proposals`.
 

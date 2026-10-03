@@ -5,7 +5,7 @@
   padding: var(--mdia-space-5);
   border: 1px solid var(--mdia-color-border);
   border-radius: var(--mdia-radius-panel);
-  background: var(--mdia-color-surface);
+  background: var(--mdia-color-surface-raised);
   color: var(--mdia-color-text);
 }
 
@@ -24,8 +24,8 @@ a.mdia-card {
   background: var(--mdia-color-surface-alt);
 }
 .mdia-card--dark {
-  background: var(--mdia-color-navy);
-  border-color: var(--mdia-color-border-on-dark);
+  background: var(--mdia-color-surface-raised);
+  border-color: var(--mdia-color-border);
 }
 
 /* Preenchimento: sm 16px, md 24px, lg 32px. */
