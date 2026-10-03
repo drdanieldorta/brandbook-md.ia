@@ -11,7 +11,7 @@ describe('Checkbox', () => {
     expect(checkbox).toHaveAttribute('type', 'checkbox');
     expect(checkbox).not.toBeChecked();
     expect(checkbox).toHaveClass('mdia-visually-hidden');
-    expect(checkbox.closest('label')).toHaveClass('mdia-checkbox');
+    expect(checkbox.closest('.mdia-checkbox')).toHaveClass('mdia-checkbox');
     expect(checkbox.nextElementSibling).toHaveAttribute('aria-hidden', 'true');
   });
 
@@ -53,7 +53,7 @@ describe('Checkbox', () => {
     expect(checkbox).toHaveAttribute('aria-invalid', 'true');
     expect(checkbox.getAttribute('aria-describedby')).toContain(alert.id);
     expect(checkbox).toHaveAccessibleDescription('Aceite os termos para continuar.');
-    expect(checkbox.closest('label')).toHaveClass('mdia-checkbox--invalid');
+    expect(checkbox.closest('.mdia-checkbox')).toHaveClass('mdia-checkbox--invalid');
   });
 
   it('invalid sem mensagem só marca aria-invalid', () => {
@@ -68,7 +68,7 @@ describe('Checkbox', () => {
     render(<Checkbox label="Faturamento" disabled onChange={onChange} />);
     const checkbox = screen.getByRole('checkbox', { name: 'Faturamento' });
     expect(checkbox).toBeDisabled();
-    expect(checkbox.closest('label')).toHaveClass('mdia-checkbox--disabled');
+    expect(checkbox.closest('.mdia-checkbox')).toHaveClass('mdia-checkbox--disabled');
     await user.click(screen.getByText('Faturamento'));
     expect(checkbox).not.toBeChecked();
     expect(onChange).not.toHaveBeenCalled();
@@ -95,7 +95,7 @@ describe('Checkbox', () => {
     expect(checkbox).toHaveAttribute('name', 'areas');
     expect(checkbox).toHaveAttribute('value', 'agenda');
     expect(checkbox).not.toHaveClass('extra');
-    expect(checkbox.closest('label')).toHaveClass('mdia-checkbox', 'extra');
+    expect(checkbox.closest('.mdia-checkbox')).toHaveClass('mdia-checkbox', 'extra');
     expect(checkbox).toHaveAccessibleDescription('Interna Dica externa');
   });
   it('não alterna ao clicar na mensagem de erro', async () => {

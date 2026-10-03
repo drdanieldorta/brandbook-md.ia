@@ -2,6 +2,12 @@
    desenhada de 20px com raio 4px. Marcado/indeterminado em azul vivo com ícone,
    foco de 3px no desenho e linha com 44px de área de toque. */
 .mdia-checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Linha clicável: caixa | rótulo e descrição; a mensagem de erro fica fora do label. */
+.mdia-checkbox__control {
   position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -14,6 +20,8 @@
 
 .mdia-checkbox--disabled {
   color: var(--mdia-color-text-disabled);
+}
+.mdia-checkbox--disabled .mdia-checkbox__control {
   cursor: not-allowed;
 }
 
@@ -40,13 +48,16 @@
 }
 
 /* Hover (habilitado): borda mais escura. */
-.mdia-checkbox:hover .mdia-checkbox__input:not(:disabled) + .mdia-checkbox__box {
+.mdia-checkbox__control:hover .mdia-checkbox__input:not(:disabled) + .mdia-checkbox__box {
   border-color: var(--mdia-color-text-secondary);
 }
 
 /* Inválido: borda de erro, mantida no hover. A mensagem de erro completa o estado. */
 .mdia-checkbox--invalid .mdia-checkbox__box,
-.mdia-checkbox--invalid:hover .mdia-checkbox__input:not(:disabled) + .mdia-checkbox__box {
+.mdia-checkbox--invalid
+  .mdia-checkbox__control:hover
+  .mdia-checkbox__input:not(:disabled)
+  + .mdia-checkbox__box {
   border-color: var(--mdia-color-error);
 }
 
@@ -56,8 +67,10 @@
   background: var(--mdia-color-blue);
   border-color: var(--mdia-color-blue);
 }
-.mdia-checkbox:hover .mdia-checkbox__input:checked:not(:disabled) + .mdia-checkbox__box,
-.mdia-checkbox:hover .mdia-checkbox__input:indeterminate:not(:disabled) + .mdia-checkbox__box {
+.mdia-checkbox__control:hover .mdia-checkbox__input:checked:not(:disabled) + .mdia-checkbox__box,
+.mdia-checkbox__control:hover
+  .mdia-checkbox__input:indeterminate:not(:disabled)
+  + .mdia-checkbox__box {
   background: var(--mdia-color-blue-hover);
   border-color: var(--mdia-color-blue-hover);
 }
@@ -100,8 +113,8 @@
 }
 
 .mdia-checkbox__error {
-  grid-column: 2;
   display: flex;
+  padding-inline-start: calc(20px + var(--mdia-space-3));
   align-items: center;
   gap: var(--mdia-space-1);
   margin-top: var(--mdia-space-1);

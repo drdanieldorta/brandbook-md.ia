@@ -20,8 +20,8 @@ export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement
  * Caixa de seleção com `<input type="checkbox">` nativo (teclado e leitores de
  * tela) e visual do guia (§7): caixa de 20px com raio 4px, marcado em azul vivo
  * com ícone, foco visível de 3px e linha com 44px de área de toque. Estados
- * combinam cor e ícone. `className` vai para o rótulo raiz; os demais
- * atributos vão para o `<input>`.
+ * combinam cor e ícone. `className` vai para o elemento raiz (que envolve o
+ * rótulo e a mensagem de erro); os demais atributos vão para o `<input>`.
  */
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   {
@@ -60,7 +60,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Che
   }, [indeterminate]);
 
   return (
-    <label
+    <div
       className={cx(
         'mdia-checkbox',
         disabled && 'mdia-checkbox--disabled',
@@ -68,39 +68,36 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Che
         className,
       )}
     >
-      <input
-        ref={setRefs}
-        type="checkbox"
-        className="mdia-checkbox__input mdia-visually-hidden"
-        disabled={disabled}
-        aria-labelledby={labelId}
-        aria-describedby={cx(descriptionId, errorId, describedBy) || undefined}
-        aria-invalid={isInvalid || undefined}
-        {...rest}
-      />
-      <span className="mdia-checkbox__box" aria-hidden="true">
-        <Check className="mdia-checkbox__icon mdia-checkbox__icon--check" strokeWidth={3} />
-        <Minus className="mdia-checkbox__icon mdia-checkbox__icon--minus" strokeWidth={3} />
-      </span>
-      <span id={labelId} className="mdia-checkbox__label">
-        {label}
-      </span>
-      {hasDescription ? (
-        <span id={descriptionId} className="mdia-checkbox__description">
-          {description}
+      <label className="mdia-checkbox__control">
+        <input
+          ref={setRefs}
+          type="checkbox"
+          className="mdia-checkbox__input mdia-visually-hidden"
+          disabled={disabled}
+          aria-labelledby={labelId}
+          aria-describedby={cx(descriptionId, errorId, describedBy) || undefined}
+          aria-invalid={isInvalid || undefined}
+          {...rest}
+        />
+        <span className="mdia-checkbox__box" aria-hidden="true">
+          <Check className="mdia-checkbox__icon mdia-checkbox__icon--check" strokeWidth={3} />
+          <Minus className="mdia-checkbox__icon mdia-checkbox__icon--minus" strokeWidth={3} />
         </span>
-      ) : null}
+        <span id={labelId} className="mdia-checkbox__label">
+          {label}
+        </span>
+        {hasDescription ? (
+          <span id={descriptionId} className="mdia-checkbox__description">
+            {description}
+          </span>
+        ) : null}
+      </label>
       {hasError ? (
-        <span
-          id={errorId}
-          className="mdia-checkbox__error"
-          role="alert"
-          onClick={(event) => event.preventDefault()}
-        >
+        <span id={errorId} className="mdia-checkbox__error" role="alert">
           <CircleAlert aria-hidden="true" />
           <span>{error}</span>
         </span>
       ) : null}
-    </label>
+    </div>
   );
 });
