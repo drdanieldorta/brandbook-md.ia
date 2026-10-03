@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="220 630 1160 390" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+<title id="title">MD.IA — mestre da referência final aprovada</title>
+<desc id="desc">Reconstrução vetorial controlada de mdia_png.png: ponto redondo, A de topo plano, gradiente azul, ECG dourado conectado aos pontos laterais e sobreposto ao D. Fundo transparente. Variante de reprodução sem brilho.</desc>
+<g id="lettering">
+<path id="letra-M" d="M460 830V660H487L553 771L617 660H644V830H614V718L561 811H550Q545 811 542 806L490 719V830Z" fill="#F5F3EE" fill-rule="evenodd"/>
+<path id="letra-D" d="M685 660H758C816 660 851 691 851 745C851 799 817 830 758 830H685ZM717 686V803H757C797 803 820 782 820 745C820 707 797 686 757 686Z" fill="#F5F3EE" fill-rule="evenodd"/>
+<path id="letra-I" d="M938 660H969V830H938Z" fill="#F5F3EE" fill-rule="evenodd"/>
+<path id="letra-A" d="M991 830L1068 660H1100L1177 830H1145L1128.5 791H1039.5L1023 830ZM1051 767H1117L1084 691Z" fill="#F5F3EE" fill-rule="evenodd"/>
+<circle id="ponto-do-nome" cx="886" cy="812" r="20" fill="#F5F3EE"/>
+</g>
+<g id="eletrocardiograma">
+<path id="ecg-superior-esquerdo" d="M355 900L695 893.5L715 875C718 872 722 873 724 876C727 879 727 882 723 886L705 903Q702 906 697 906L355 901Z" fill="#F5F3EE"/>
+<path id="ecg-central" d="M260 933L752 926.5Q756 926.5 759 930L768.5 943L795 831L797 818H807V944L838 870Q841 864 845 869L866 893.5L1244 900L866 906.5Q860 906.5 856 902L843 885L808 965Q805 972 798 967L797 863L777 955Q775 963 769 958L751.5 940Z" fill="#F5F3EE"/>
+<path id="ecg-inferior-direito" d="M850 955H858L889 929Q892 926 897 926L1342 933L897 940L870 962Q866 968 858 968H850C845 968 842 966 842 962C842 958 845 955 850 955Z" fill="#F5F3EE"/>
+</g><g id="pontos-roxos">
+<circle id="no-esquerdo" cx="260" cy="932.5" r="6.5" fill="#F5F3EE"/>
+<circle id="no-superior-esquerdo" cx="355.5" cy="900.5" r="12" fill="#F5F3EE"/>
+<circle id="no-sobre-D" cx="801.5" cy="818.5" r="12.5" fill="#F5F3EE"/>
+<circle id="no-inferior" cx="801" cy="969" r="12" fill="#F5F3EE"/>
+<circle id="no-superior-direito" cx="1244.5" cy="900" r="12" fill="#F5F3EE"/>
+<circle id="no-direito" cx="1342" cy="932.5" r="6.5" fill="#F5F3EE"/>
+</g></svg>

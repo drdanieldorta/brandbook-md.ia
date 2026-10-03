@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="220 630 1160 390" role="img" aria-labelledby="ref-title ref-description">
+<title id="ref-title">MD.IA — vetor específico de mdia_logo_semfundo.png</title>
+<desc id="ref-description">Reconstrução própria da referência PNG sem fundo: M com terminações curvas, pontos roxos maiores sem centros brancos, ECG sem halo e sobreposição no D. Formas e gradientes editáveis. Transparência real.</desc>
+<defs>
+<linearGradient id="ref-M" gradientUnits="userSpaceOnUse" x1="554" y1="657" x2="554" y2="831"><stop stop-color="#3270DC"/><stop offset=".48" stop-color="#359DE9"/><stop offset="1" stop-color="#3072E1"/></linearGradient>
+<radialGradient id="ref-M-light" gradientUnits="userSpaceOnUse" cx="468" cy="752" r="145"><stop stop-color="#2DA7EB" stop-opacity=".5"/><stop offset="1" stop-color="#2DA7EB" stop-opacity="0"/></radialGradient>
+<linearGradient id="ref-D" gradientUnits="userSpaceOnUse" x1="690" y1="750" x2="854" y2="680"><stop stop-color="#2CA6EC"/><stop offset=".5" stop-color="#2D98E8"/><stop offset="1" stop-color="#2E77DF"/></linearGradient>
+<linearGradient id="ref-I" gradientUnits="userSpaceOnUse" x1="955" y1="657" x2="955" y2="831"><stop stop-color="#3071DE"/><stop offset=".5" stop-color="#3188E8"/><stop offset="1" stop-color="#2D7CE3"/></linearGradient>
+<linearGradient id="ref-A" gradientUnits="userSpaceOnUse" x1="1040" y1="816" x2="1113" y2="662"><stop stop-color="#2D6FE0"/><stop offset=".45" stop-color="#2E87E7"/><stop offset="1" stop-color="#2F9DEB"/></linearGradient>
+<linearGradient id="ref-period" gradientUnits="userSpaceOnUse" x1="887" y1="790" x2="887" y2="834"><stop stop-color="#3276E3"/><stop offset="1" stop-color="#2C69E0"/></linearGradient>
+<linearGradient id="ref-gold-top" gradientUnits="userSpaceOnUse" x1="357" y1="900" x2="728" y2="875"><stop stop-color="#654345"/><stop offset=".55" stop-color="#C5A16C"/><stop offset="1" stop-color="#EBC78C"/></linearGradient>
+<linearGradient id="ref-gold-main" gradientUnits="userSpaceOnUse" x1="260" y1="925" x2="1245" y2="925"><stop stop-color="#614249"/><stop offset=".15" stop-color="#A78059"/><stop offset=".35" stop-color="#DFB97D"/><stop offset=".55" stop-color="#EDD098"/><stop offset=".7" stop-color="#D3AD75"/><stop offset="1" stop-color="#66414B"/></linearGradient>
+<linearGradient id="ref-gold-bottom" gradientUnits="userSpaceOnUse" x1="848" y1="950" x2="1342" y2="935"><stop stop-color="#C49A64"/><stop offset=".16" stop-color="#E2BB84"/><stop offset=".55" stop-color="#94663F"/><stop offset="1" stop-color="#62394D"/></linearGradient>
+<radialGradient id="ref-purple" cx="42%" cy="30%" r="75%"><stop stop-color="#A369B7"/><stop offset=".5" stop-color="#9251AA"/><stop offset="1" stop-color="#713584"/></radialGradient>
+</defs>
+<g id="ref-lettering">
+<path id="ref-letter-M" d="M461 831V657H478Q487 657 493 667L554 767L619 660Q621 657 625 657H648V831H615V719L569 800Q564 811 554 812Q547 812 542 804L494 721V831Z" fill="url(#ref-M)" fill-rule="evenodd"/>
+<path d="M461 831V657H478Q487 657 493 667L554 767L619 660Q621 657 625 657H648V831H615V719L569 800Q564 811 554 812Q547 812 542 804L494 721V831Z" fill="url(#ref-M-light)"/>
+<path id="ref-letter-D" d="M686 657H759C817 657 854 690 854 744C854 799 818 831 759 831H686ZM721 685V800H759C798 800 820 780 820 744C820 707 798 685 759 685Z" fill="url(#ref-D)" fill-rule="evenodd"/>
+<path id="ref-letter-I" d="M938 657H971V831H938Z" fill="url(#ref-I)" fill-rule="evenodd"/>
+<path id="ref-letter-A" d="M993 831L1067 660Q1068 657 1072 657H1097Q1100 657 1102 662L1179 831H1146L1129 793H1043L1027 831ZM1055 765H1116L1085 693Z" fill="url(#ref-A)" fill-rule="evenodd"/>
+<circle cx="887" cy="812" r="21" fill="url(#ref-period)"/>
+</g><g id="ref-ecg">
+<path id="ref-ecg-superior" d="M357 899L696 891L716 873Q721 869 725 874L728 880Q729 883 725 886L704 905Q702 907 697 907L357 902Z" fill="url(#ref-gold-top)"/>
+<path id="ref-ecg-central" d="M260 932L752 926Q757 926 760 931L769 944L794 838L797 819H805L806 938L837 870Q840 862 846 867L867 891L1245 900L867 907Q863 907 859 903L843 885L807 964Q804 973 798 968L796 861L777 954Q775 966 770 962L752 940L260 935Z" fill="url(#ref-gold-main)"/>
+<path id="ref-ecg-inferior" d="M855 955Q859 955 863 952L892 928Q894 926 899 926L1342 933L899 940L872 964Q865 971 858 971Q850 971 848 966Q846 961 850 958Z" fill="url(#ref-gold-bottom)"/>
+</g><g id="ref-nodes" fill="url(#ref-purple)">
+<circle cx="260" cy="933" r="10"/>
+<circle cx="357" cy="900" r="16.5"/>
+<circle cx="800" cy="819" r="16"/>
+<circle cx="801" cy="970" r="16"/>
+<circle cx="1245" cy="900" r="16.5"/>
+<circle cx="1342" cy="933" r="10"/>
+</g></svg>

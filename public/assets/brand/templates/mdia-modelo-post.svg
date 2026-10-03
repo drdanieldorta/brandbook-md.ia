@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080"><title>MD.IA — modelo editável post</title><rect width="1080" height="1080" fill="#102B50" /><text x="86.4" y="561.6" font-family="Arial,sans-serif" font-size="64.8" font-weight="700" fill="white">IA com direção.</text><svg viewBox="220 630 1160 390" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc" x="75.60000000000001" y="54.0" width="345.6" height="248.4">
+<title id="title">MD.IA — mestre da referência final aprovada</title>
+<desc id="desc">Reconstrução vetorial controlada de mdia_png.png: ponto redondo, A de topo plano, gradiente azul, ECG dourado conectado aos pontos laterais e sobreposto ao D. Fundo transparente. Variante de reprodução sem brilho.</desc>
+<defs>
+<linearGradient id="azul-M" gradientUnits="userSpaceOnUse" x1="553" y1="660" x2="553" y2="830"><stop stop-color="#4073D7" /><stop offset=".5" stop-color="#548FE1" /><stop offset="1" stop-color="#3F77D8" /></linearGradient>
+<radialGradient id="luz-M" gradientUnits="userSpaceOnUse" cx="454" cy="800" r="145"><stop stop-color="#3DABE4" stop-opacity=".68" /><stop offset="1" stop-color="#3DABE4" stop-opacity="0" /></radialGradient>
+<linearGradient id="azul-D" gradientUnits="userSpaceOnUse" x1="690" y1="660" x2="750" y2="840"><stop stop-color="#459FE1" /><stop offset="1" stop-color="#3779D6" /></linearGradient>
+<radialGradient id="luz-D" gradientUnits="userSpaceOnUse" cx="765" cy="797" r="75"><stop stop-color="#40B2E8" stop-opacity=".68" /><stop offset="1" stop-color="#40B2E8" stop-opacity="0" /></radialGradient>
+<linearGradient id="azul-I" gradientUnits="userSpaceOnUse" x1="953.5" y1="660" x2="953.5" y2="830"><stop stop-color="#4175DA" /><stop offset="1" stop-color="#438ADD" /></linearGradient>
+<linearGradient id="azul-A" gradientUnits="userSpaceOnUse" x1="1029" y1="829" x2="1110" y2="660"><stop stop-color="#3971D9" /><stop offset=".5" stop-color="#438CDE" /><stop offset="1" stop-color="#409FE0" /></linearGradient>
+<linearGradient id="azul-ponto" gradientUnits="userSpaceOnUse" x1="886" y1="792" x2="886" y2="832"><stop stop-color="#3E79DE" /><stop offset="1" stop-color="#326DD1" /></linearGradient>
+<linearGradient id="ouro-superior" gradientUnits="userSpaceOnUse" x1="355" y1="900" x2="724" y2="900"><stop stop-color="#915642" /><stop offset=".6" stop-color="#E3B777" /><stop offset=".9" stop-color="#FFE6A0" /><stop offset="1" stop-color="#FFF7CB" /></linearGradient>
+<linearGradient id="ouro-central" gradientUnits="userSpaceOnUse" x1="260" y1="900" x2="1244" y2="900"><stop stop-color="#824539" /><stop offset=".12" stop-color="#A36B4D" /><stop offset=".3" stop-color="#F2C777" /><stop offset=".335" stop-color="#FFF1B6" /><stop offset=".4" stop-color="#E2AC66" /><stop offset=".50" stop-color="#DCA05E" /><stop offset=".555" stop-color="#E9BC77" /><stop offset=".61" stop-color="#F3C985" /><stop offset=".692" stop-color="#FFE5A2" /><stop offset=".77" stop-color="#D8AA6B" /><stop offset="1" stop-color="#81503C" /></linearGradient>
+<linearGradient id="ouro-inferior" gradientUnits="userSpaceOnUse" x1="842" y1="945" x2="1342" y2="945"><stop stop-color="#EFC37C" /><stop offset=".27" stop-color="#FFEAB0" /><stop offset=".44" stop-color="#DBAC6E" /><stop offset=".7" stop-color="#A46B50" /><stop offset="1" stop-color="#81473A" /></linearGradient>
+<radialGradient id="roxo-luz" cx="50%" cy="47%" r="53%"><stop stop-color="#F0DFFD" /><stop offset=".35" stop-color="#D8B5ED" /><stop offset=".7" stop-color="#B65FD1" /><stop offset="1" stop-color="#823394" /></radialGradient>
+<radialGradient id="roxo-anel" cx="50%" cy="50%" r="50%"><stop stop-color="#E8C7F5" /><stop offset=".54" stop-color="#E4C0F2" /><stop offset=".59" stop-color="#B45ECE" /><stop offset="1" stop-color="#973CB4" /></radialGradient>
+</defs>
+<g id="lettering">
+<path id="letra-M" d="M460 830V660H487L553 771L617 660H644V830H614V718L561 811H550Q545 811 542 806L490 719V830Z" fill="url(#azul-M)" fill-rule="evenodd" />
+<path id="realce-M" d="M460 830V660H487L553 771L617 660H644V830H614V718L561 811H550Q545 811 542 806L490 719V830Z" fill="url(#luz-M)" fill-rule="evenodd" />
+<path id="letra-D" d="M685 660H758C816 660 851 691 851 745C851 799 817 830 758 830H685ZM717 686V803H757C797 803 820 782 820 745C820 707 797 686 757 686Z" fill="url(#azul-D)" fill-rule="evenodd" />
+<path id="realce-D" d="M685 660H758C816 660 851 691 851 745C851 799 817 830 758 830H685ZM717 686V803H757C797 803 820 782 820 745C820 707 797 686 757 686Z" fill="url(#luz-D)" fill-rule="evenodd" />
+<path id="letra-I" d="M938 660H969V830H938Z" fill="url(#azul-I)" fill-rule="evenodd" />
+<path id="letra-A" d="M991 830L1068 660H1100L1177 830H1145L1128.5 791H1039.5L1023 830ZM1051 767H1117L1084 691Z" fill="url(#azul-A)" fill-rule="evenodd" />
+<circle id="ponto-do-nome" cx="886" cy="812" r="20" fill="url(#azul-ponto)" />
+</g>
+<g id="eletrocardiograma">
+<path id="ecg-superior-esquerdo" d="M355 900L695 893.5L715 875C718 872 722 873 724 876C727 879 727 882 723 886L705 903Q702 906 697 906L355 901Z" fill="url(#ouro-superior)" />
+<path id="ecg-central" d="M260 933L752 926.5Q756 926.5 759 930L768.5 943L795 831L797 818H807V944L838 870Q841 864 845 869L866 893.5L1244 900L866 906.5Q860 906.5 856 902L843 885L808 965Q805 972 798 967L797 863L777 955Q775 963 769 958L751.5 940Z" fill="url(#ouro-central)" />
+<path id="ecg-inferior-direito" d="M850 955H858L889 929Q892 926 897 926L1342 933L897 940L870 962Q866 968 858 968H850C845 968 842 966 842 962C842 958 845 955 850 955Z" fill="url(#ouro-inferior)" />
+</g><g id="pontos-roxos">
+<circle id="no-esquerdo" cx="260" cy="932.5" r="6.5" fill="url(#roxo-luz)" />
+<circle id="no-superior-esquerdo" cx="355.5" cy="900.5" r="12" fill="url(#roxo-luz)" />
+<circle id="no-sobre-D" cx="801.5" cy="818.5" r="12.5" fill="url(#roxo-anel)" />
+<circle id="no-inferior" cx="801" cy="969" r="12" fill="url(#roxo-anel)" />
+<circle id="no-superior-direito" cx="1244.5" cy="900" r="12" fill="url(#roxo-luz)" />
+<circle id="no-direito" cx="1342" cy="932.5" r="6.5" fill="url(#roxo-luz)" />
+</g></svg><text x="86.4" y="669.6" font-family="Arial,sans-serif" font-size="43.2" fill="white">Gestão com clareza.</text><path d="M86.4 799.2H864.0" stroke="#C6A45C" stroke-width="3" /><text x="86.4" y="950.4" font-family="Arial,sans-serif" font-size="21.6" fill="#BFCDE0">CONSULTORIA E MENTORIA EM INTELIGÊNCIA ARTIFICIAL</text></svg>

@@ -1,0 +1,62 @@
+{
+  "status": "Guia 4.0 — referência final mdia_png.png",
+  "colors": {
+    "blue": "#1761D8",
+    "navy": "#102B50",
+    "gold": "#C6A45C",
+    "purple": "#8056C7",
+    "ice": "#F3F6FA",
+    "white": "#FFFFFF"
+  },
+  "font": {
+    "family": "Segoe UI, Arial, sans-serif",
+    "body": "16px",
+    "lineHeight": 1.6
+  },
+  "radius": {
+    "button": "8px",
+    "panel": "16px"
+  },
+  "motion": {
+    "feedback": "180ms",
+    "entrance": "400ms",
+    "easing": "cubic-bezier(0.2,0.7,0.2,1)"
+  },
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
+  "logo": {
+    "master": "mdia-logo-mestre.svg",
+    "viewBox": "220 630 1160 390",
+    "safeSpaceUnits": 30,
+    "minimumWidthPx": 160,
+    "minimumWidthMm": 35,
+    "preserve": [
+      "original letter contours",
+      "per-letter blue gradients",
+      "gold ECG gradient",
+      "purple nodes",
+      "original ECG overlap"
+    ],
+    "note": "Solid colors are supporting UI recommendations, not substitutes for original logo gradients.",
+    "recommendedWidthPx": 280,
+    "recommendedWidthMm": 60,
+    "gradients": 12,
+    "masks": 0,
+    "rasterImages": 0,
+    "letteringFontDependency": false,
+    "filters": 1,
+    "cleanVariant": "mdia-logo-limpo.svg",
+    "offwhite": "#F5F3EE",
+    "black": "#000000",
+    "preferredPresentation": "mdia-logo-limpo.svg"
+  }
+}

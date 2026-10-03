@@ -1,0 +1,32 @@
+MD.IA — Guia 4.0 / referência final mdia_png.png
+
+MESTRE
+mdia-logo-mestre.svg: paths e círculos editáveis, 12 gradientes e 1 filtro SVG nativo para o halo dourado. Nenhuma fonte, imagem raster, máscara ou recorte incorporado. O PNG mestre possui 4640 × 1560 pixels, com transparência real. Os aliases principal e original-vetorizado contêm o mesmo mestre atual.
+
+CONSTRUÇÃO
+Reconstrução controlada da referência final de 4096 × 4096 pixels, mantida intacta em mdia-original.png. O fundo preto pertence ao arquivo recebido, não ao vetor. Ponto circular, A de topo plano, ECG conectado aos nós laterais, sobreposição no D e brilho dourado preservados. Nove paths e sete círculos; os dois paths de realce reutilizam os contornos de M e D. Topo y=660, base y=830, haste I=31. viewBox 220 630 1160 390; proporção 116:39.
+
+VARIANTES
+principal/mestre: colorido com halo, preferencialmente sobre fundo escuro uniforme.
+limpo: mesmas formas e gradientes, sem filtro; adequado a fundos claros, reprodução compacta e sistemas sem suporte a filtros.
+offwhite: #F5F3EE, todos os elementos em uma só cor, sem gradiente ou brilho, fundo transparente. Usar sobre fundos escuros.
+preto: #000000, todos os elementos em uma só cor, sem gradiente ou brilho, fundo transparente. Usar sobre fundos claros.
+Off-white e preto incluem SVG e PNG transparente de 4640 × 1560 px. O contraste aproximado entre as cores é 18,9:1. Conferir o fundo real de aplicação. Os realces redundantes não existem nas versões de uma tinta; os contornos e proporções permanecem iguais.
+branco: #FFFFFF; monocromatico: #102B50; reverso: alias branco.
+
+USO
+Preservar a prancheta inteira, incluindo espaço do halo. Reservar no mínimo 30 unidades livres em torno do desenho sólido. Preferir 280 px ou 60 mm. Em contexto identificado, a variante sem brilho pode chegar a 160 px ou 35 mm após prova. Abaixo disso, usar nome em texto ou favicon M. Nunca distorcer, cortar o brilho ou desfazer a sobreposição interna.
+O filtro pode variar entre renderizadores; usar o PNG transparente quando necessário ou a variante limpa em processos incompatíveis. Não se promete igualdade pixel a pixel com o PNG ou perfeição absoluta.
+
+MODELOS E APOIO
+Slide, post e cartão contêm a variante final sem halo, priorizada também na apresentação do guia por preferência do usuário. Arial nos textos dos modelos e Segoe UI na interface são tipografias de apoio, não a fonte do logo, e não são distribuídas. Preparar sangria, perfil e prova para impressão. Tokens sólidos apoiam a interface e não substituem os gradientes.
+Fotografia e direção 3D são imagens sintéticas raster. Não representam equipe real ou modelo 3D editável. As referências anteriores ficam somente no histórico local e do projeto.
+
+REFERÊNCIA COMPLEMENTAR
+mdia-referencia-complementar.png (mdia_logo_semfundo.png), 3162 × 3162, possui canal alpha real, verificado. Usada para conferir coerência dos contornos sem halo; não substitui a referência principal aprovada. O vetor limpo deriva da mesma geometria do mestre.
+
+REFERÊNCIA VISÍVEL
+A seção #referencia-enviada apresenta o PNG exato mdia_logo_semfundo.png ao lado da reconstrução limpa, com download direto. O enquadramento é feito apenas por CSS; o arquivo original permanece intacto.
+
+VETOR DA REFERÊNCIA SEM FUNDO
+mdia-logo-referencia-sem-fundo-vetorizado.svg é uma reconstrução própria de mdia_logo_semfundo.png, distinta do mestre anterior e da variante limpa anterior. Preserva terminações curvas do M, pontos roxos maiores sem centros brancos, ECG sem halo e sobreposição no D. Oito paths, sete círculos e dez gradientes; nenhuma imagem, texto ou filtro. PNG correspondente: 4640 × 1560 RGBA transparente. Pequenas diferenças de curva/cor decorrem da reconstrução controlada; não há promessa de equivalência pixel a pixel.
