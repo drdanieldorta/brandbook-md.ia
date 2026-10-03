@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@mdia/ui": ["../../packages/ui/src/index.ts"],
+      "@mdia/ui/styles.css": ["../../packages/ui/src/styles/index.css"]
+    }
+  },
+  "include": ["src", "vite.config.ts"]
+}

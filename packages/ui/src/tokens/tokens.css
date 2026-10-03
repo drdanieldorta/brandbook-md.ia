@@ -1,0 +1,142 @@
+/* ==========================================================================
+   MD.IA — tokens de design (@mdia/ui)
+   Fonte: guia 4.0 (docs/brandbook.md). Valores do guia são reproduzidos sem
+   alteração. O que o guia não define está marcado como PROPOSTA v1 e
+   consolidado em docs/propostas-v1.md para validação da marca.
+   ========================================================================== */
+:root {
+  /* --- Paleta sólida de apoio (guia §4) --- */
+  --mdia-color-blue: #1761d8; /* azul vivo: ação e apoio de interface */
+  --mdia-color-blue-hover: #104dae; /* hover do botão principal (guia §7) */
+  --mdia-color-navy: #102b50; /* azul-noite: texto e fundos */
+  --mdia-color-gold: #c6a45c; /* dourado: acento de apoio (não usar em texto pequeno sobre branco) */
+  --mdia-color-purple: #8056c7; /* roxo: acentos, nós do logo, anel de foco */
+  --mdia-color-ice: #f3f6fa; /* gelo: superfícies */
+  --mdia-color-white: #ffffff;
+  --mdia-color-offwhite: #f5f3ee; /* logo monocromático off-white, texto sobre fundos escuros */
+  --mdia-color-black: #000000; /* logo monocromático preto */
+
+  /* --- Neutros de interface (PROPOSTA v1: observados na demonstração do guia) --- */
+  --mdia-color-text: var(--mdia-color-navy);
+  --mdia-color-text-secondary: #57677b;
+  --mdia-color-text-disabled: #536278;
+  --mdia-color-border: #dde4ed;
+  --mdia-color-surface: var(--mdia-color-white);
+  --mdia-color-surface-alt: var(--mdia-color-ice);
+  --mdia-color-surface-hover: #e9f0f9;
+  --mdia-color-surface-ghost-hover: #edf3fd;
+  --mdia-color-surface-disabled: #dde4ed;
+
+  /* --- Superfícies escuras (PROPOSTA v1: navy do guia + tons derivados) --- */
+  --mdia-color-navy-600: #1a3a66;
+  --mdia-color-navy-800: #0b1f3a;
+  --mdia-color-text-on-dark: var(--mdia-color-offwhite);
+  --mdia-color-text-secondary-on-dark: #b8c4d6;
+  --mdia-color-text-disabled-on-dark: #8d9bb0;
+  --mdia-color-border-on-dark: rgba(245, 243, 238, 0.18);
+
+  /* --- Estados semânticos (PROPOSTA v1; o guia não define paleta semântica) --- */
+  --mdia-color-success: #1e7b4e;
+  --mdia-color-success-bg: #e6f4ec;
+  --mdia-color-warning: #8a6a1f;
+  --mdia-color-warning-bg: #fbf4e3;
+  --mdia-color-error: #c0392b;
+  --mdia-color-error-bg: #fbeae7;
+  --mdia-color-info: var(--mdia-color-blue);
+  --mdia-color-info-bg: #e8f0fc;
+
+  /* --- Tipografia (guia §5). Inter é PROPOSTA v1; Segoe UI/Arial do guia ficam como fallback --- */
+  --mdia-font-family: 'Inter Variable', 'Segoe UI', Arial, sans-serif;
+  --mdia-font-weight-regular: 400;
+  --mdia-font-weight-semibold: 600;
+  --mdia-font-size-display: clamp(3.5rem, 2.9rem + 1.6vw, 4rem); /* 56–64px */
+  --mdia-font-size-title: clamp(2rem, 1.7rem + 1vw, 2.5rem); /* 32–40px */
+  --mdia-font-size-heading: 1.5rem; /* 24px — PROPOSTA v1 */
+  --mdia-font-size-subheading: 1.25rem; /* 20px — PROPOSTA v1 */
+  --mdia-font-size-body: 1rem; /* 16px, token base do JSON */
+  --mdia-font-size-body-lg: 1.125rem; /* 18px, teto do intervalo do guia */
+  --mdia-font-size-body-sm: 0.875rem; /* 14px */
+  --mdia-font-size-label: 0.875rem; /* 14px */
+  --mdia-font-size-caption: 0.75rem; /* 12px — PROPOSTA v1 */
+  --mdia-line-height-heading: 1.1;
+  --mdia-line-height-body: 1.6;
+  --mdia-line-height-tight: 1.3; /* PROPOSTA v1: subtítulos e rótulos */
+  --mdia-measure: 65ch; /* dentro do intervalo 45–75 caracteres do guia */
+
+  /* --- Espaçamento (guia §6: 4/8/12/16/24/32/48/64/96) --- */
+  --mdia-space-1: 4px;
+  --mdia-space-2: 8px;
+  --mdia-space-3: 12px;
+  --mdia-space-4: 16px;
+  --mdia-space-5: 24px;
+  --mdia-space-6: 32px;
+  --mdia-space-7: 48px;
+  --mdia-space-8: 64px;
+  --mdia-space-9: 96px;
+
+  /* --- Raios (guia §6) --- */
+  --mdia-radius-button: 8px;
+  --mdia-radius-panel: 16px;
+  --mdia-radius-full: 999px; /* PROPOSTA v1 */
+
+  /* --- Movimento (guia §10): animar uma vez, sem flashes nem ciclos contínuos --- */
+  --mdia-motion-feedback: 180ms;
+  --mdia-motion-entrance: 400ms;
+  --mdia-motion-easing: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* --- Toque e foco (guia §7) --- */
+  --mdia-size-touch: 44px;
+  --mdia-focus-ring-width: 3px;
+  --mdia-focus-ring-color: var(--mdia-color-purple);
+  --mdia-focus-ring: var(--mdia-focus-ring-width) solid var(--mdia-focus-ring-color);
+  --mdia-focus-ring-offset: 2px; /* PROPOSTA v1 */
+
+  /* --- Elevação (PROPOSTA v1; sombra "lg" é a do toast da demonstração) --- */
+  --mdia-shadow-sm: 0 1px 2px rgba(16, 43, 80, 0.08);
+  --mdia-shadow-md: 0 4px 12px rgba(16, 43, 80, 0.12);
+  --mdia-shadow-lg: 0 6px 25px rgba(0, 0, 0, 0.13);
+
+  /* --- Camadas (PROPOSTA v1) --- */
+  --mdia-z-dropdown: 1000;
+  --mdia-z-sticky: 1100;
+  --mdia-z-overlay: 1300;
+  --mdia-z-modal: 1400;
+  --mdia-z-toast: 1500;
+
+  /* --- Layout (PROPOSTA v1; breakpoints: sm 640, md 768, lg 1024, xl 1280) --- */
+  --mdia-container-max: 1200px;
+  --mdia-container-gutter: var(--mdia-space-5);
+
+  /* --- Compatibilidade com mdia-tokens.css original do guia --- */
+  --mdia-blue: var(--mdia-color-blue);
+  --mdia-navy: var(--mdia-color-navy);
+  --mdia-gold: var(--mdia-color-gold);
+  --mdia-purple: var(--mdia-color-purple);
+  --mdia-ice: var(--mdia-color-ice);
+  --mdia-font: var(--mdia-font-family);
+  --mdia-radius: var(--mdia-radius-button);
+  --mdia-motion: var(--mdia-motion-feedback);
+}
+
+/* Tema escuro por escopo (PROPOSTA v1). Aplicar em <html>, em uma seção ou em um card. */
+[data-theme='dark'],
+.mdia-dark {
+  --mdia-color-text: var(--mdia-color-text-on-dark);
+  --mdia-color-text-secondary: var(--mdia-color-text-secondary-on-dark);
+  --mdia-color-text-disabled: var(--mdia-color-text-disabled-on-dark);
+  --mdia-color-border: var(--mdia-color-border-on-dark);
+  --mdia-color-surface: var(--mdia-color-navy);
+  --mdia-color-surface-alt: var(--mdia-color-navy-800);
+  --mdia-color-surface-hover: var(--mdia-color-navy-600);
+  --mdia-color-surface-ghost-hover: rgba(245, 243, 238, 0.08);
+  --mdia-color-surface-disabled: var(--mdia-color-navy-600);
+  --mdia-color-success: #4cc38a;
+  --mdia-color-success-bg: rgba(76, 195, 138, 0.14);
+  --mdia-color-warning: #e3c06e;
+  --mdia-color-warning-bg: rgba(227, 192, 110, 0.14);
+  --mdia-color-error: #f08a7e;
+  --mdia-color-error-bg: rgba(240, 138, 126, 0.14);
+  --mdia-color-info: #b8c4d6;
+  --mdia-color-info-bg: rgba(184, 196, 214, 0.14);
+  color-scheme: dark;
+}

@@ -4,3 +4,11 @@ ds-bundle/
 .design-sync/.cache/
 .design-sync/learnings/
 .design-sync/node_modules
+
+# node / builds
+node_modules/
+dist/
+storybook-static/
+*.log
+.DS_Store
+packages/ui/src/components/Logo/logos.generated.ts

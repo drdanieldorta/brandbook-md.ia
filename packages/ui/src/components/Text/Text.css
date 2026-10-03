@@ -1,0 +1,28 @@
+.mdia-text {
+  margin: 0;
+  font-size: var(--mdia-font-size-body);
+  font-weight: var(--mdia-font-weight-regular);
+  line-height: var(--mdia-line-height-body);
+}
+
+.mdia-text--lg {
+  font-size: var(--mdia-font-size-body-lg);
+}
+
+.mdia-text--sm {
+  font-size: var(--mdia-font-size-body-sm);
+  line-height: 1.5;
+}
+
+.mdia-text--caption {
+  font-size: var(--mdia-font-size-caption);
+  line-height: 1.4;
+}
+
+.mdia-text--semibold {
+  font-weight: var(--mdia-font-weight-semibold);
+}
+
+.mdia-text--measure {
+  max-width: var(--mdia-measure);
+}

@@ -1,0 +1,29 @@
+.mdia-heading {
+  margin: 0;
+  font-weight: var(--mdia-font-weight-semibold);
+  line-height: var(--mdia-line-height-heading);
+  letter-spacing: -0.01em;
+}
+
+.mdia-heading--display {
+  font-size: var(--mdia-font-size-display);
+  letter-spacing: -0.02em;
+}
+
+.mdia-heading--title {
+  font-size: var(--mdia-font-size-title);
+}
+
+.mdia-heading--heading {
+  font-size: var(--mdia-font-size-heading);
+  line-height: 1.2;
+}
+
+.mdia-heading--subheading {
+  font-size: var(--mdia-font-size-subheading);
+  line-height: var(--mdia-line-height-tight);
+}
+
+.mdia-heading--balance {
+  text-wrap: balance;
+}

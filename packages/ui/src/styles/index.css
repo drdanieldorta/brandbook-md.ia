@@ -1,0 +1,13 @@
+/* Folha única do @mdia/ui: fontes, tokens, base e componentes.
+   Consumo: import '@mdia/ui/styles.css'. */
+@import './fonts.css';
+@import '../tokens/tokens.css';
+@import './base.css';
+@import './utilities.css';
+
+@import '../components/Logo/Logo.css';
+@import '../components/Heading/Heading.css';
+@import '../components/Text/Text.css';
+@import '../components/Link/Link.css';
+@import '../components/Spinner/Spinner.css';
+@import '../components/Button/Button.css';

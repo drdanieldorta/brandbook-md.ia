@@ -1,0 +1,115 @@
+.mdia-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--mdia-space-2);
+  min-height: var(--mdia-size-touch);
+  min-width: var(--mdia-size-touch);
+  padding: 0 var(--mdia-space-5);
+  border: 1px solid transparent;
+  border-radius: var(--mdia-radius-button);
+  font: inherit;
+  font-size: var(--mdia-font-size-body);
+  font-weight: var(--mdia-font-weight-semibold);
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color var(--mdia-motion-feedback) var(--mdia-motion-easing),
+    color var(--mdia-motion-feedback) var(--mdia-motion-easing),
+    border-color var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+
+.mdia-button:focus-visible {
+  outline: var(--mdia-focus-ring);
+  outline-offset: var(--mdia-focus-ring-offset);
+}
+
+/* Principal: azul vivo, texto branco, hover #104DAE (guia §7). */
+.mdia-button--primary {
+  background: var(--mdia-color-blue);
+  color: var(--mdia-color-white);
+}
+.mdia-button--primary:hover:not(:disabled):not([aria-disabled='true']),
+.mdia-button--primary:active:not(:disabled):not([aria-disabled='true']) {
+  background: var(--mdia-color-blue-hover);
+}
+
+/* Secundário: superfície com borda e texto azul-noite. */
+.mdia-button--secondary {
+  background: var(--mdia-color-surface);
+  color: var(--mdia-color-text);
+  border-color: currentColor;
+}
+.mdia-button--secondary:hover:not(:disabled):not([aria-disabled='true']),
+.mdia-button--secondary:active:not(:disabled):not([aria-disabled='true']) {
+  background: var(--mdia-color-surface-hover);
+}
+
+/* Ação discreta: fundo transparente, texto azul vivo. */
+.mdia-button--ghost {
+  background: transparent;
+  color: var(--mdia-color-blue);
+}
+.mdia-button--ghost:hover:not(:disabled):not([aria-disabled='true']),
+.mdia-button--ghost:active:not(:disabled):not([aria-disabled='true']) {
+  background: var(--mdia-color-surface-ghost-hover);
+}
+[data-theme='dark'] .mdia-button--ghost,
+.mdia-dark .mdia-button--ghost {
+  color: var(--mdia-color-text-on-dark);
+}
+
+/* Desabilitado: sem interação (guia §7). */
+.mdia-button:disabled,
+.mdia-button[aria-disabled='true'] {
+  background: var(--mdia-color-surface-disabled);
+  color: var(--mdia-color-text-disabled);
+  border-color: transparent;
+  cursor: not-allowed;
+}
+
+.mdia-button--loading {
+  cursor: progress;
+}
+
+/* Tamanhos: md = 44px (toque mínimo); sm reduz o visual e preserva 44px de toque. */
+.mdia-button--sm {
+  min-height: 36px;
+  padding: 0 var(--mdia-space-4);
+  font-size: var(--mdia-font-size-label);
+}
+.mdia-button--sm::before {
+  content: '';
+  position: absolute;
+  inset: -4px 0;
+}
+.mdia-button--lg {
+  min-height: 52px;
+  padding: 0 var(--mdia-space-6);
+  font-size: var(--mdia-font-size-body-lg);
+}
+.mdia-button--full {
+  width: 100%;
+}
+
+.mdia-button__icon {
+  display: inline-flex;
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+}
+.mdia-button__icon > svg {
+  width: 100%;
+  height: 100%;
+}
+.mdia-button__spinner {
+  flex: none;
+}
+.mdia-button__label {
+  display: inline-block;
+}

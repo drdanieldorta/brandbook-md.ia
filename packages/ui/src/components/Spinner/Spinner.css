@@ -1,0 +1,44 @@
+.mdia-spinner {
+  display: inline-block;
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  vertical-align: -0.2em;
+  animation: mdia-spin 0.8s linear infinite;
+}
+
+.mdia-spinner--sm {
+  width: 1em;
+  height: 1em;
+}
+
+.mdia-spinner--lg {
+  width: 2em;
+  height: 2em;
+  border-width: 3px;
+}
+
+.mdia-spinner--brand {
+  color: var(--mdia-color-blue);
+}
+
+.mdia-spinner--inverse {
+  color: var(--mdia-color-white);
+}
+
+@keyframes mdia-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mdia-spinner {
+    animation: none;
+    border-right-color: currentColor;
+    opacity: 0.6;
+  }
+}

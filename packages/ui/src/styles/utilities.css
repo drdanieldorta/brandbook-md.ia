@@ -1,0 +1,45 @@
+/* Utilitários compartilhados pelos componentes. */
+.mdia-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Tons de texto (usados por Heading, Text e Link). */
+.mdia-tone-secondary {
+  color: var(--mdia-color-text-secondary);
+}
+.mdia-tone-disabled {
+  color: var(--mdia-color-text-disabled);
+}
+.mdia-tone-inverse {
+  color: var(--mdia-color-text-on-dark);
+}
+.mdia-tone-brand {
+  color: var(--mdia-color-blue);
+}
+.mdia-tone-success {
+  color: var(--mdia-color-success);
+}
+.mdia-tone-warning {
+  color: var(--mdia-color-warning);
+}
+.mdia-tone-error {
+  color: var(--mdia-color-error);
+}
+
+.mdia-align-start {
+  text-align: start;
+}
+.mdia-align-center {
+  text-align: center;
+}
+.mdia-align-end {
+  text-align: end;
+}
