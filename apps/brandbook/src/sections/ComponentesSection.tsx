@@ -158,7 +158,7 @@ export function ComponentesSection() {
                 <IconButton label="Buscar" icon={<Search />} variant="secondary" />
                 <IconButton
                   label="Favoritar"
-                  icon={<ArrowRight />}
+                  icon={<Star />}
                   pressed={favorito}
                   onClick={() => setFavorito((v) => !v)}
                 />
