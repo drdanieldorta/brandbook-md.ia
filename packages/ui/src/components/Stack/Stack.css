@@ -1,0 +1,84 @@
+/* Stack: flexbox com espaçamento pela escala do guia (§6), sempre por classe. */
+.mdia-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mdia-space-4);
+}
+
+.mdia-stack--column {
+  flex-direction: column;
+}
+.mdia-stack--row {
+  flex-direction: row;
+}
+.mdia-stack--wrap {
+  flex-wrap: wrap;
+}
+
+/* Como lista (ul/ol): sem marcadores nem recuo. */
+ul.mdia-stack,
+ol.mdia-stack {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.mdia-stack--align-start {
+  align-items: flex-start;
+}
+.mdia-stack--align-center {
+  align-items: center;
+}
+.mdia-stack--align-end {
+  align-items: flex-end;
+}
+.mdia-stack--align-stretch {
+  align-items: stretch;
+}
+.mdia-stack--align-baseline {
+  align-items: baseline;
+}
+
+.mdia-stack--justify-start {
+  justify-content: flex-start;
+}
+.mdia-stack--justify-center {
+  justify-content: center;
+}
+.mdia-stack--justify-end {
+  justify-content: flex-end;
+}
+.mdia-stack--justify-between {
+  justify-content: space-between;
+}
+.mdia-stack--justify-around {
+  justify-content: space-around;
+}
+
+/* Escala: 1=4px, 2=8px, 3=12px, 4=16px, 5=24px, 6=32px, 7=48px, 8=64px, 9=96px. */
+.mdia-stack--gap-1 {
+  gap: var(--mdia-space-1);
+}
+.mdia-stack--gap-2 {
+  gap: var(--mdia-space-2);
+}
+.mdia-stack--gap-3 {
+  gap: var(--mdia-space-3);
+}
+.mdia-stack--gap-4 {
+  gap: var(--mdia-space-4);
+}
+.mdia-stack--gap-5 {
+  gap: var(--mdia-space-5);
+}
+.mdia-stack--gap-6 {
+  gap: var(--mdia-space-6);
+}
+.mdia-stack--gap-7 {
+  gap: var(--mdia-space-7);
+}
+.mdia-stack--gap-8 {
+  gap: var(--mdia-space-8);
+}
+.mdia-stack--gap-9 {
+  gap: var(--mdia-space-9);
+}

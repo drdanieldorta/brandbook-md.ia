@@ -1,0 +1,70 @@
+/* Divider: linha de 1px na cor da borda. A margem usa a escala do guia (§6)
+   via --mdia-divider-spacing, definida só por classe. */
+.mdia-divider {
+  --mdia-divider-spacing: var(--mdia-space-4);
+
+  display: block;
+  margin: var(--mdia-divider-spacing) 0;
+  border: 0;
+  border-top: 1px solid var(--mdia-color-border);
+  color: var(--mdia-color-text-secondary);
+}
+
+.mdia-divider--spacing-0 {
+  --mdia-divider-spacing: 0;
+}
+.mdia-divider--spacing-2 {
+  --mdia-divider-spacing: var(--mdia-space-2);
+}
+.mdia-divider--spacing-4 {
+  --mdia-divider-spacing: var(--mdia-space-4);
+}
+.mdia-divider--spacing-6 {
+  --mdia-divider-spacing: var(--mdia-space-6);
+}
+.mdia-divider--spacing-8 {
+  --mdia-divider-spacing: var(--mdia-space-8);
+}
+
+/* Vertical: 1px de largura; estica em contêineres flex e tem altura mínima fora deles. */
+.mdia-divider--vertical {
+  display: inline-block;
+  align-self: stretch;
+  width: 1px;
+  min-height: 1.5em;
+  margin: 0 var(--mdia-divider-spacing);
+  border-top: 0;
+  border-left: 1px solid var(--mdia-color-border);
+  vertical-align: middle;
+}
+
+/* Com rótulo: as linhas são pseudo-elementos ao redor do texto. */
+.mdia-divider--labeled {
+  display: flex;
+  align-items: center;
+  gap: var(--mdia-space-3);
+  border: 0;
+  font-size: var(--mdia-font-size-body-sm);
+  line-height: var(--mdia-line-height-tight);
+}
+.mdia-divider--labeled::before,
+.mdia-divider--labeled::after {
+  content: '';
+  flex: 1 1 0;
+  border-top: 1px solid var(--mdia-color-border);
+}
+.mdia-divider__label {
+  flex: none;
+  color: var(--mdia-color-text-secondary);
+}
+
+.mdia-divider--labeled.mdia-divider--vertical {
+  display: inline-flex;
+  flex-direction: column;
+  width: auto;
+}
+.mdia-divider--labeled.mdia-divider--vertical::before,
+.mdia-divider--labeled.mdia-divider--vertical::after {
+  border-top: 0;
+  border-left: 1px solid var(--mdia-color-border);
+}
