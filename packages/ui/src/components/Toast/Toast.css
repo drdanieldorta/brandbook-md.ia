@@ -1,0 +1,183 @@
+/* Toast: superfície com borda, sombra "lg" (toast da demonstração, guia §12),
+   faixa e ícone no tom. Entrada única (guia §10); prefers-reduced-motion é
+   tratado em base.css. */
+.mdia-toast {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--mdia-space-3);
+  width: 100%;
+  max-width: 420px;
+  padding: var(--mdia-space-4);
+  border: 1px solid var(--mdia-color-border);
+  border-inline-start-width: 4px;
+  border-radius: var(--mdia-radius-panel);
+  background: var(--mdia-color-surface);
+  color: var(--mdia-color-text);
+  font-size: var(--mdia-font-size-body-sm);
+  line-height: var(--mdia-line-height-body);
+  box-shadow: var(--mdia-shadow-lg);
+  animation: mdia-toast-in var(--mdia-motion-entrance) var(--mdia-motion-easing) 1 both;
+}
+
+.mdia-toast--info {
+  border-inline-start-color: var(--mdia-color-info);
+}
+.mdia-toast--info .mdia-toast__icon {
+  color: var(--mdia-color-info);
+}
+
+.mdia-toast--success {
+  border-inline-start-color: var(--mdia-color-success);
+}
+.mdia-toast--success .mdia-toast__icon {
+  color: var(--mdia-color-success);
+}
+
+.mdia-toast--warning {
+  border-inline-start-color: var(--mdia-color-warning);
+}
+.mdia-toast--warning .mdia-toast__icon {
+  color: var(--mdia-color-warning);
+}
+
+.mdia-toast--error {
+  border-inline-start-color: var(--mdia-color-error);
+}
+.mdia-toast--error .mdia-toast__icon {
+  color: var(--mdia-color-error);
+}
+
+/* Ícone (ou spinner decorativo) centralizado na primeira linha de texto. */
+.mdia-toast__icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  height: calc(var(--mdia-line-height-body) * var(--mdia-font-size-body-sm));
+  font-size: var(--mdia-font-size-body);
+}
+.mdia-toast__icon > svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.mdia-toast__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.mdia-toast__title {
+  font-weight: var(--mdia-font-weight-semibold);
+}
+.mdia-toast__action {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mdia-space-2);
+  margin-top: var(--mdia-space-2);
+}
+
+/* Fechar: 32px visuais, 44px de toque via ::before (como em Button--sm). */
+.mdia-toast__dismiss {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: calc(var(--mdia-space-1) * -1) calc(var(--mdia-space-1) * -1)
+    calc(var(--mdia-space-1) * -1) 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--mdia-radius-button);
+  background: transparent;
+  color: var(--mdia-color-text-secondary);
+  font-size: var(--mdia-font-size-body);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color var(--mdia-motion-feedback) var(--mdia-motion-easing),
+    color var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+.mdia-toast__dismiss::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+}
+.mdia-toast__dismiss > svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+.mdia-toast__dismiss:hover {
+  background: var(--mdia-color-surface-alt);
+  color: var(--mdia-color-text);
+}
+.mdia-toast__dismiss:focus-visible {
+  outline: var(--mdia-focus-ring);
+  outline-offset: var(--mdia-focus-ring-offset);
+}
+
+/* Entrada única: desliza da borda mais próxima e aparece (nunca em loop). */
+@keyframes mdia-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--mdia-space-2));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes mdia-toast-in-top {
+  from {
+    opacity: 0;
+    transform: translateY(calc(var(--mdia-space-2) * -1));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pilha fixa: o container não captura cliques, os toasts sim. */
+.mdia-toast-stack {
+  position: fixed;
+  z-index: var(--mdia-z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--mdia-space-3);
+  width: calc(100% - var(--mdia-space-5) * 2);
+  max-width: 420px;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+.mdia-toast-stack .mdia-toast {
+  pointer-events: auto;
+}
+
+.mdia-toast-stack--bottom-right {
+  right: var(--mdia-space-5);
+  bottom: var(--mdia-space-5);
+}
+.mdia-toast-stack--bottom-left {
+  left: var(--mdia-space-5);
+  bottom: var(--mdia-space-5);
+}
+.mdia-toast-stack--bottom-center {
+  left: 50%;
+  bottom: var(--mdia-space-5);
+  transform: translateX(-50%);
+}
+.mdia-toast-stack--top-right {
+  top: var(--mdia-space-5);
+  right: var(--mdia-space-5);
+}
+.mdia-toast-stack--top-center {
+  top: var(--mdia-space-5);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mdia-toast-stack--top-right .mdia-toast,
+.mdia-toast-stack--top-center .mdia-toast {
+  animation-name: mdia-toast-in-top;
+}

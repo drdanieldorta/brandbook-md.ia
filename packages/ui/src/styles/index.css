@@ -11,3 +11,6 @@
 @import '../components/Link/Link.css';
 @import '../components/Spinner/Spinner.css';
 @import '../components/Button/Button.css';
+@import '../components/Badge/Badge.css';
+@import '../components/Alert/Alert.css';
+@import '../components/Toast/Toast.css';
