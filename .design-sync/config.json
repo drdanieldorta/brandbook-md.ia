@@ -1,0 +1,59 @@
+{
+  "projectId": "3b2e9a8f-119d-47fb-84a4-69627067aded",
+  "pkg": "@mdia/ui",
+  "globalName": "MdiaUi",
+  "shape": "storybook",
+  "storybookStatic": ".design-sync/sb-reference",
+  "storybookConfigDir": "packages/ui/.storybook",
+  "buildCmd": "pnpm build:ui",
+  "entry": "packages/ui/dist/index.js",
+  "cssEntry": "dist/styles.css",
+  "provider": {
+    "component": "ThemeScope",
+    "props": {
+      "inset": true
+    }
+  },
+  "readmeHeader": ".design-sync/conventions.md",
+  "guidelinesGlob": ["../../docs/brandbook.md", "../../docs/propostas-v1.md"],
+  "overrides": {
+    "Badge": {
+      "cardMode": "column"
+    },
+    "Grid": {
+      "cardMode": "column"
+    },
+    "Hero": {
+      "cardMode": "column"
+    },
+    "SiteHeader": {
+      "cardMode": "column"
+    },
+    "Heading": {
+      "cardMode": "column"
+    },
+    "Toast": {
+      "cardMode": "single",
+      "primaryStory": "Padrao"
+    },
+    "ToastStack": {
+      "cardMode": "single",
+      "primaryStory": "InferiorDireita"
+    },
+    "Divider": {
+      "cardMode": "column"
+    },
+    "Icon": {
+      "cardMode": "column"
+    },
+    "Checkbox": {
+      "cardMode": "column"
+    },
+    "Radio": {
+      "cardMode": "column"
+    },
+    "Switch": {
+      "cardMode": "column"
+    }
+  }
+}
