@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, CalendarDays, Search, X } from 'lucide-react';
+import { ArrowRight, CalendarDays, Search, Star, X } from 'lucide-react';
 import {
   Alert,
   Badge,
