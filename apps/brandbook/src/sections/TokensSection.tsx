@@ -52,7 +52,8 @@ export function TokensSection() {
               </pre>
               <Text size="sm" tone="secondary">
                 O tema escuro é o padrão. Para o tema claro do guia, envolva uma área com{' '}
-                <code>className="mdia-light"</code> ou use <code>data-theme="light"</code>.
+                <code>{'<ThemeScope mode="light">'}</code> (ou a classe <code>mdia-light</code> /{' '}
+                <code>data-theme="light"</code>).
               </Text>
             </Stack>
           </Card>

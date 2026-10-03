@@ -1,0 +1,15 @@
+/* ThemeScope: escopo de tema. Fundo, cor do texto e tokens vêm das classes
+   mdia-dark / mdia-light (tokens.css + base.css); aqui só respiro e preenchimento. */
+.mdia-theme {
+  box-sizing: border-box;
+}
+
+/* Respiro interno de 24px (escala §6), já sobre o fundo do tema. */
+.mdia-theme--inset {
+  padding: var(--mdia-space-5);
+}
+
+/* Raiz de página: ocupa no mínimo a altura da janela. */
+.mdia-theme--fill {
+  min-height: 100vh;
+}

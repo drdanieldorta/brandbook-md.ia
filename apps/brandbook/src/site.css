@@ -140,6 +140,11 @@
   scroll-margin-top: 88px;
 }
 
+/* Painel de demonstração do tema claro (ThemeScope) no grid de cards. */
+.theme-demo {
+  border-radius: var(--mdia-radius-panel);
+}
+
 .hero-gradient {
   background: var(--mdia-gradient-surface);
 }

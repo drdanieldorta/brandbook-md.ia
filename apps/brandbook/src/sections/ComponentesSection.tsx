@@ -23,6 +23,7 @@ import {
   Text,
   TextArea,
   TextInput,
+  ThemeScope,
   Toast,
 } from '@mdia/ui';
 import { componentRules } from '../content/brand';
@@ -268,22 +269,20 @@ export function ComponentesSection() {
                 </Button>
               </CardFooter>
             </Card>
-            <Card className="mdia-light" elevated>
-              <CardHeader>
+            <ThemeScope mode="light" inset className="theme-demo">
+              <Stack gap={3}>
                 <Heading level={4} size="subheading">
                   Tema claro por escopo
                 </Heading>
-              </CardHeader>
-              <CardBody>
                 <Text size="sm">
-                  A paleta do guia 4.0 continua disponível: basta envolver uma área com a classe de
-                  tema claro.
+                  A paleta do guia 4.0 continua disponível: envolva uma área com{' '}
+                  <code>ThemeScope mode="light"</code> e tudo dentro troca de tema.
                 </Text>
-              </CardBody>
-              <CardFooter>
-                <Button size="sm">Agendar conversa</Button>
-              </CardFooter>
-            </Card>
+                <div>
+                  <Button size="sm">Agendar conversa</Button>
+                </div>
+              </Stack>
+            </ThemeScope>
           </Grid>
           <Divider label="ou" />
           <Text size="sm" tone="secondary" align="center">

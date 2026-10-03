@@ -28,6 +28,7 @@ Regras adotadas:
 - Kicker (`Eyebrow`): caixa alta de 13px com ponto roxo (azul) ou dourado.
 - Logo: variante limpa no cabeçalho e no rodapé escuros, mestre com brilho no herói; off-white quando o contraste pedir.
 - O azul-noite `#102B50` deixa de ser o fundo escuro e permanece cor de marca (lettering do logo e tema claro).
+- Escopo de tema: `ThemeScope` (`mode="dark" | "light"`, `inset`, `fill`) pinta fundo e texto e redefine os tokens da área envolvida; é o invólucro das amostras no Claude Design e a forma recomendada de abrir um painel claro em uma página escura.
 
 Status: **proposta, aguardando validação da marca**. Nada aqui altera um valor do guia; tudo preenche lacunas listadas em `brandbook.md` §13 ("Lacunas que permanecem abertas"). Cada item está marcado como proposta em `packages/ui/src/tokens/tokens.css` e em `tokens.json → proposals`.
 
