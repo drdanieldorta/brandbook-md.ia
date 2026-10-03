@@ -1,0 +1,173 @@
+/* SiteHeader: barra de 64px (72px a partir de 1024px) sobre a superfície, com
+   borda inferior de 1px. Usa só tokens semânticos, então o tom escuro vem do
+   escopo .mdia-dark; abaixo ficam apenas as exceções de acento. Breakpoints
+   PROPOSTOS v1 (o guia §6 não define): sm 640, md 768, lg 1024. */
+.mdia-site-header {
+  position: relative;
+  background: var(--mdia-color-surface);
+  color: var(--mdia-color-text);
+  border-bottom: 1px solid var(--mdia-color-border);
+}
+
+/* Fixa no topo; sticky também serve de bloco de contenção do painel móvel. */
+.mdia-site-header--sticky {
+  position: sticky;
+  top: 0;
+  z-index: var(--mdia-z-sticky);
+}
+
+.mdia-site-header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--mdia-space-4);
+  min-height: 64px;
+}
+
+/* Marca: o nome acessível vem do aria-label do link; o logo é decorativo.
+   A cor alimenta o LogoMark monocromático (currentColor) no tom escuro. */
+.mdia-site-header__brand {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  min-height: var(--mdia-size-touch);
+  color: var(--mdia-color-text);
+  text-decoration: none;
+  border-radius: 2px;
+}
+.mdia-site-header__brand:focus-visible {
+  outline: var(--mdia-focus-ring);
+  outline-offset: var(--mdia-focus-ring-offset);
+}
+
+/* Abaixo de 160px o guia (§3) manda usar o favicon M: até 639px fica só o
+   LogoMark; a partir de 640px (sm, PROPOSTA v1) entra o logo completo de 160px. */
+.mdia-site-header__brand .mdia-site-header__logo {
+  display: none;
+}
+.mdia-site-header__brand .mdia-site-header__logomark {
+  display: inline-block;
+}
+
+/* Navegação: abaixo de 768px (md, PROPOSTA v1) é um painel vertical absoluto
+   sob a barra, visível só quando aberto. */
+.mdia-site-header__nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  padding: var(--mdia-space-3) var(--mdia-container-gutter) var(--mdia-space-5);
+  background: var(--mdia-color-surface);
+  border-bottom: 1px solid var(--mdia-color-border);
+  box-shadow: var(--mdia-shadow-md);
+}
+.mdia-site-header__nav--open {
+  display: block;
+}
+
+.mdia-site-header__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Links: corpo 16px, peso 600, área de toque de 44px, hover azul vivo e
+   página atual com sublinhado de 2px azul (ouro no tom escuro). */
+.mdia-site-header__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--mdia-size-touch);
+  padding: 0 var(--mdia-space-2);
+  border-radius: var(--mdia-radius-button);
+  font-size: var(--mdia-font-size-body);
+  font-weight: var(--mdia-font-weight-semibold);
+  line-height: var(--mdia-line-height-tight);
+  color: var(--mdia-color-text);
+  text-decoration: none;
+  transition: color var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+.mdia-site-header__link:hover {
+  color: var(--mdia-color-blue);
+}
+.mdia-site-header__link:focus-visible {
+  outline: var(--mdia-focus-ring);
+  outline-offset: var(--mdia-focus-ring-offset);
+}
+.mdia-site-header__link[aria-current='page'] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--mdia-color-blue);
+  text-underline-offset: 0.4em;
+}
+
+/* Tom escuro: hover branco e acento de apoio dourado na página atual (guia §4). */
+[data-theme='dark'] .mdia-site-header__link:hover,
+.mdia-dark .mdia-site-header__link:hover {
+  color: var(--mdia-color-white);
+}
+[data-theme='dark'] .mdia-site-header__link[aria-current='page'],
+.mdia-dark .mdia-site-header__link[aria-current='page'] {
+  text-decoration-color: var(--mdia-color-gold);
+}
+
+/* Chamada para ação: no painel móvel fica ao fim da lista, separada por borda. */
+.mdia-site-header__cta {
+  display: flex;
+  margin-top: var(--mdia-space-2);
+  padding-top: var(--mdia-space-3);
+  border-top: 1px solid var(--mdia-color-border);
+}
+
+.mdia-site-header__bar .mdia-site-header__toggle {
+  flex: none;
+}
+
+/* sm (640px, PROPOSTA v1): entra o logo completo de 160px, sai o LogoMark. */
+@media (min-width: 640px) {
+  .mdia-site-header__brand .mdia-site-header__logo {
+    display: inline-block;
+  }
+  .mdia-site-header__brand .mdia-site-header__logomark {
+    display: none;
+  }
+}
+
+/* md (768px, PROPOSTA v1): navegação em linha, sem painel nem botão de menu. */
+@media (min-width: 768px) {
+  .mdia-site-header__nav {
+    display: flex;
+    position: static;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--mdia-space-5);
+    min-width: 0;
+    padding: 0;
+    background: transparent;
+    border-bottom: 0;
+    box-shadow: none;
+  }
+  .mdia-site-header__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--mdia-space-2);
+  }
+  .mdia-site-header__cta {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+  .mdia-site-header__bar .mdia-site-header__toggle {
+    display: none;
+  }
+}
+
+/* lg (1024px, PROPOSTA v1): barra de 72px. */
+@media (min-width: 1024px) {
+  .mdia-site-header__bar {
+    min-height: 72px;
+  }
+}

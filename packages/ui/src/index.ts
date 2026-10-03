@@ -27,3 +27,6 @@ export * from './components/Grid';
 export * from './components/Card';
 export * from './components/Divider';
 export * from './components/Section';
+export * from './components/SiteHeader';
+export * from './components/SiteFooter';
+export * from './components/Hero';

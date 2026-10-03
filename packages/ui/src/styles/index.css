@@ -28,3 +28,6 @@
 @import '../components/Card/Card.css';
 @import '../components/Divider/Divider.css';
 @import '../components/Section/Section.css';
+@import '../components/SiteHeader/SiteHeader.css';
+@import '../components/SiteFooter/SiteFooter.css';
+@import '../components/Hero/Hero.css';

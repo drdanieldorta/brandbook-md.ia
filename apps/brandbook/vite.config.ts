@@ -15,7 +15,7 @@ export default defineConfig({
     alias: [
       { find: '@mdia/ui/styles.css', replacement: ui('styles/index.css') },
       { find: '@mdia/ui/tokens.css', replacement: ui('tokens/tokens.css') },
-      { find: '@mdia/ui', replacement: ui('index.ts') },
+      { find: /^@mdia\/ui$/, replacement: ui('index.ts') },
     ],
   },
   build: { outDir: 'dist', emptyOutDir: true },

@@ -1,0 +1,59 @@
+/* SiteFooter: coluna da marca e colunas de links em Grid fluida, linha legal
+   após o Divider. Tokens semânticos cuidam do tom escuro via .mdia-dark; só o
+   fundo azul-noite é explícito, como na Section. */
+.mdia-site-footer {
+  padding-block: var(--mdia-space-8);
+  background: var(--mdia-color-surface);
+  color: var(--mdia-color-text);
+  border-top: 1px solid var(--mdia-color-border);
+}
+
+.mdia-site-footer--dark {
+  background: var(--mdia-color-navy);
+}
+
+/* Marca: logo de 160px (mínimo do guia §3) e descrição curta. */
+.mdia-site-footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--mdia-space-4);
+  min-width: 0;
+}
+.mdia-site-footer__description {
+  max-width: 40ch;
+}
+
+.mdia-site-footer__column {
+  min-width: 0;
+}
+.mdia-site-footer__title {
+  margin-bottom: var(--mdia-space-3);
+}
+
+.mdia-site-footer__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Cada link ocupa 44px de altura (toque mínimo do guia §7). */
+.mdia-site-footer__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--mdia-size-touch);
+}
+
+.mdia-site-footer__extra {
+  margin-top: var(--mdia-space-6);
+}
+
+/* Breakpoint PROPOSTO v1 (md = 768px; o guia não define breakpoints):
+   abaixo dele o respiro cai um degrau da escala. */
+@media (max-width: 767.98px) {
+  .mdia-site-footer {
+    padding-block: var(--mdia-space-7);
+  }
+}
