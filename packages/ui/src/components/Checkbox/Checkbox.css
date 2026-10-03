@@ -1,0 +1,129 @@
+/* Checkbox (guia §7): input nativo visualmente oculto (continua focável) e caixa
+   desenhada de 20px com raio 4px. Marcado/indeterminado em azul vivo com ícone,
+   foco de 3px no desenho e linha com 44px de área de toque. */
+.mdia-checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Linha clicável: caixa | rótulo e descrição; a mensagem de erro fica fora do label. */
+.mdia-checkbox__control {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: minmax(var(--mdia-size-touch), auto);
+  column-gap: var(--mdia-space-3);
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mdia-checkbox--disabled {
+  color: var(--mdia-color-text-disabled);
+}
+.mdia-checkbox--disabled .mdia-checkbox__control {
+  cursor: not-allowed;
+}
+
+.mdia-checkbox__box {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--mdia-color-border-strong);
+  border-radius: calc(var(--mdia-radius-button) / 2);
+  background: var(--mdia-color-surface);
+  color: var(--mdia-color-white);
+  transition:
+    background-color var(--mdia-motion-feedback) var(--mdia-motion-easing),
+    border-color var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+
+.mdia-checkbox__icon {
+  display: none;
+  width: 14px;
+  height: 14px;
+}
+
+/* Hover (habilitado): borda mais escura. */
+.mdia-checkbox__control:hover .mdia-checkbox__input:not(:disabled) + .mdia-checkbox__box {
+  border-color: var(--mdia-color-text-secondary);
+}
+
+/* Inválido: borda de erro, mantida no hover. A mensagem de erro completa o estado. */
+.mdia-checkbox--invalid .mdia-checkbox__box,
+.mdia-checkbox--invalid
+  .mdia-checkbox__control:hover
+  .mdia-checkbox__input:not(:disabled)
+  + .mdia-checkbox__box {
+  border-color: var(--mdia-color-error);
+}
+
+/* Marcado ou indeterminado: fundo azul vivo e ícone branco (estado nunca só por cor). */
+.mdia-checkbox__input:checked + .mdia-checkbox__box,
+.mdia-checkbox__input:indeterminate + .mdia-checkbox__box {
+  background: var(--mdia-color-blue);
+  border-color: var(--mdia-color-blue);
+}
+.mdia-checkbox__control:hover .mdia-checkbox__input:checked:not(:disabled) + .mdia-checkbox__box,
+.mdia-checkbox__control:hover
+  .mdia-checkbox__input:indeterminate:not(:disabled)
+  + .mdia-checkbox__box {
+  background: var(--mdia-color-blue-hover);
+  border-color: var(--mdia-color-blue-hover);
+}
+.mdia-checkbox__input:checked + .mdia-checkbox__box .mdia-checkbox__icon--check {
+  display: block;
+}
+.mdia-checkbox__input:indeterminate + .mdia-checkbox__box .mdia-checkbox__icon--check {
+  display: none;
+}
+.mdia-checkbox__input:indeterminate + .mdia-checkbox__box .mdia-checkbox__icon--minus {
+  display: block;
+}
+
+/* Foco visível no desenho, já que o input real está oculto. */
+.mdia-checkbox__input:focus-visible + .mdia-checkbox__box {
+  outline: var(--mdia-focus-ring);
+  outline-offset: var(--mdia-focus-ring-offset);
+}
+
+/* Desabilitado: sem interação (guia §7). */
+.mdia-checkbox__input:disabled + .mdia-checkbox__box {
+  background: var(--mdia-color-surface-disabled);
+  border-color: var(--mdia-color-surface-disabled);
+  color: var(--mdia-color-text-disabled);
+}
+
+.mdia-checkbox__label {
+  font-size: var(--mdia-font-size-body);
+  line-height: var(--mdia-line-height-body);
+}
+
+.mdia-checkbox__description {
+  grid-column: 2;
+  font-size: var(--mdia-font-size-body-sm);
+  line-height: 1.5;
+  color: var(--mdia-color-text-secondary);
+}
+.mdia-checkbox--disabled .mdia-checkbox__description {
+  color: inherit;
+}
+
+.mdia-checkbox__error {
+  display: flex;
+  padding-inline-start: calc(20px + var(--mdia-space-3));
+  align-items: center;
+  gap: var(--mdia-space-1);
+  margin-top: var(--mdia-space-1);
+  font-size: var(--mdia-font-size-label);
+  line-height: 1.5;
+  color: var(--mdia-color-error);
+}
+.mdia-checkbox__error > svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}

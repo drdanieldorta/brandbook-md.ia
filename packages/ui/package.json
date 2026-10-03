@@ -1,0 +1,66 @@
+{
+  "name": "@mdia/ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Design system React da MD.IA: tokens e componentes derivados do guia 4.0",
+  "license": "UNLICENSED",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./tokens.json": "./dist/tokens.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "generate:logos": "node scripts/generate-logos.mjs",
+    "build": "pnpm generate:logos && tsup && node scripts/build-css.mjs",
+    "typecheck": "pnpm generate:logos && tsc --noEmit -p tsconfig.json",
+    "test": "pnpm generate:logos && vitest run",
+    "test:watch": "vitest",
+    "storybook": "pnpm generate:logos && storybook dev -p 6006",
+    "build-storybook": "pnpm generate:logos && storybook build"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "lucide-react": "^1.51.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^10.6.1",
+    "@storybook/addon-docs": "^10.6.1",
+    "@storybook/react-vite": "^10.6.1",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "esbuild": "^0.28.2",
+    "jsdom": "^30.1.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "storybook": "^10.6.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.0",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  }
+}

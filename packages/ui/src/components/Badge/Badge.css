@@ -1,0 +1,110 @@
+/* Pílula de status/categoria. Pares de cor verificados por tom; no tema escuro
+   os tons semânticos clareiam e as exceções abaixo mantêm o contraste. */
+.mdia-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mdia-space-1);
+  height: 24px;
+  padding: 0 var(--mdia-space-3);
+  border: 1px solid transparent;
+  border-radius: var(--mdia-radius-full);
+  font-size: var(--mdia-font-size-body-sm);
+  font-weight: var(--mdia-font-weight-semibold);
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.mdia-badge--sm {
+  height: 20px;
+  padding: 0 var(--mdia-space-2);
+  font-size: var(--mdia-font-size-caption);
+}
+
+.mdia-badge__icon {
+  display: inline-flex;
+  flex: none;
+  width: 1em;
+  height: 1em;
+}
+.mdia-badge__icon > svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Suave: fundo claro do tom + texto no tom. */
+.mdia-badge--soft.mdia-badge--neutral {
+  background: var(--mdia-color-surface-alt);
+  color: var(--mdia-color-text-secondary);
+}
+.mdia-badge--soft.mdia-badge--brand {
+  background: var(--mdia-color-info-bg);
+  color: var(--mdia-color-blue);
+}
+.mdia-badge--soft.mdia-badge--success {
+  background: var(--mdia-color-success-bg);
+  color: var(--mdia-color-success);
+}
+.mdia-badge--soft.mdia-badge--warning {
+  background: var(--mdia-color-warning-bg);
+  color: var(--mdia-color-warning);
+}
+.mdia-badge--soft.mdia-badge--error {
+  background: var(--mdia-color-error-bg);
+  color: var(--mdia-color-error);
+}
+/* Dourado sobre fundo escuro: azul-noite no tema claro (par do guia §4), carvão elevado no escuro. */
+.mdia-badge--soft.mdia-badge--gold {
+  background: var(--mdia-color-gold-soft-bg);
+  color: var(--mdia-color-gold);
+}
+
+/* Sólido: fundo no tom + texto de contraste (branco no claro, carvão no escuro). */
+.mdia-badge--solid {
+  color: var(--mdia-color-on-status);
+}
+.mdia-badge--solid.mdia-badge--neutral {
+  background: var(--mdia-color-text-secondary);
+}
+.mdia-badge--solid.mdia-badge--brand {
+  background: var(--mdia-color-blue);
+}
+.mdia-badge--solid.mdia-badge--success {
+  background: var(--mdia-color-success);
+}
+.mdia-badge--solid.mdia-badge--warning {
+  background: var(--mdia-color-warning);
+}
+.mdia-badge--solid.mdia-badge--error {
+  background: var(--mdia-color-error);
+}
+.mdia-badge--solid.mdia-badge--gold {
+  background: var(--mdia-color-gold);
+  color: var(--mdia-color-on-gold);
+}
+
+/* Contorno: borda 1px e texto no tom, sem fundo. */
+.mdia-badge--outline {
+  background: transparent;
+  border-color: currentColor;
+}
+.mdia-badge--outline.mdia-badge--neutral {
+  color: var(--mdia-color-text-secondary);
+}
+.mdia-badge--outline.mdia-badge--brand {
+  color: var(--mdia-color-blue);
+}
+.mdia-badge--outline.mdia-badge--success {
+  color: var(--mdia-color-success);
+}
+.mdia-badge--outline.mdia-badge--warning {
+  color: var(--mdia-color-warning);
+}
+.mdia-badge--outline.mdia-badge--error {
+  color: var(--mdia-color-error);
+}
+/* Contorno dourado com texto na cor de texto: dourado em texto pequeno reprova (§4). */
+.mdia-badge--outline.mdia-badge--gold {
+  border-color: var(--mdia-color-gold);
+  color: var(--mdia-color-text);
+}

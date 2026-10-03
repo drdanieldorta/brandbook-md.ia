@@ -1,0 +1,34 @@
+{
+  "name": "mdia-brand",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Brandbook e design system React da MD.IA",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm --filter @mdia/ui build && pnpm --filter @mdia/brandbook build",
+    "build:ui": "pnpm --filter @mdia/ui build",
+    "build:site": "pnpm --filter @mdia/brandbook build",
+    "build:storybook": "pnpm --filter @mdia/ui build-storybook",
+    "dev": "pnpm --filter @mdia/brandbook dev",
+    "storybook": "pnpm --filter @mdia/ui storybook",
+    "test": "pnpm --filter @mdia/ui test",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.12.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.9",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.71.0"
+  }
+}

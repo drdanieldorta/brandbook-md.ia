@@ -1,0 +1,27 @@
+.mdia-link {
+  color: var(--mdia-color-blue);
+  font-weight: var(--mdia-font-weight-semibold);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  border-radius: 2px;
+  transition: color var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+
+.mdia-link:hover {
+  color: var(--mdia-color-blue-hover);
+  text-decoration-thickness: 2px;
+}
+
+.mdia-link:focus-visible {
+  outline: var(--mdia-focus-ring);
+  outline-offset: 2px;
+}
+
+.mdia-link--inverse {
+  color: var(--mdia-color-text-on-dark);
+}
+
+.mdia-link--inverse:hover {
+  color: var(--mdia-color-white);
+}

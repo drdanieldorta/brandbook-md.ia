@@ -1,0 +1,90 @@
+/* Card: superfície de conteúdo com raio de painel de 16px (guia §6). Os tons
+   usam tokens semânticos, então dentro de .mdia-dark o cartão padrão já escurece. */
+.mdia-card {
+  display: block;
+  padding: var(--mdia-space-5);
+  border: 1px solid var(--mdia-color-border);
+  border-radius: var(--mdia-radius-panel);
+  background: var(--mdia-color-surface-raised);
+  color: var(--mdia-color-text);
+}
+
+/* Cartão-link: herda a cor do texto e não sublinha. */
+a.mdia-card {
+  text-decoration: none;
+}
+
+.mdia-card:focus-visible {
+  outline: var(--mdia-focus-ring);
+  outline-offset: var(--mdia-focus-ring-offset);
+}
+
+/* Tons. */
+.mdia-card--alt {
+  background: var(--mdia-color-surface-alt);
+}
+.mdia-card--dark {
+  background: var(--mdia-color-surface-raised);
+  border-color: var(--mdia-color-border);
+}
+
+/* Preenchimento: sm 16px, md 24px, lg 32px. */
+.mdia-card--padding-none {
+  padding: 0;
+}
+.mdia-card--padding-sm {
+  padding: var(--mdia-space-4);
+}
+.mdia-card--padding-md {
+  padding: var(--mdia-space-5);
+}
+.mdia-card--padding-lg {
+  padding: var(--mdia-space-6);
+}
+
+.mdia-card--elevated {
+  box-shadow: var(--mdia-shadow-md);
+}
+
+/* Interativo: hover eleva e escurece a borda; cursor e foco reforçam o estado além da cor. */
+.mdia-card--interactive {
+  cursor: pointer;
+  transition:
+    box-shadow var(--mdia-motion-feedback) var(--mdia-motion-easing),
+    border-color var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+.mdia-card--interactive:hover {
+  box-shadow: var(--mdia-shadow-md);
+  border-color: var(--mdia-color-text-secondary);
+}
+
+/* Partes: com elas o cartão vira coluna flex, e o corpo cresce para o rodapé
+   ficar alinhado entre cartões de mesma altura (ex.: dentro de Grid). */
+.mdia-card:has(> :is(.mdia-card__header, .mdia-card__body, .mdia-card__footer)) {
+  display: flex;
+  flex-direction: column;
+}
+
+.mdia-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--mdia-space-3);
+}
+
+.mdia-card__body {
+  flex: 1 1 auto;
+}
+
+.mdia-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--mdia-space-3);
+  padding-top: var(--mdia-space-4);
+  border-top: 1px solid var(--mdia-color-border);
+}
+
+:is(.mdia-card__header, .mdia-card__body) + :is(.mdia-card__body, .mdia-card__footer) {
+  margin-top: var(--mdia-space-4);
+}

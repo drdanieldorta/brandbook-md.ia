@@ -1,0 +1,18 @@
+.mdia-icon {
+  display: inline-block;
+  flex: none;
+  vertical-align: middle;
+}
+
+.mdia-icon--brand {
+  color: var(--mdia-color-blue);
+}
+
+.mdia-icon--secondary {
+  color: var(--mdia-color-text-secondary);
+}
+
+/* Cor de apoio para preenchimentos; o traço vem do gradiente no próprio SVG. */
+.mdia-icon--gold {
+  color: var(--mdia-color-gold);
+}

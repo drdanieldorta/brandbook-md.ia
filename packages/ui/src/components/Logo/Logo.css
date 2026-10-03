@@ -1,0 +1,17 @@
+.mdia-logo {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.mdia-logo__safe {
+  display: inline-block;
+  line-height: 0;
+  max-width: 100%;
+}
+
+.mdia-logomark {
+  display: inline-block;
+  vertical-align: middle;
+  flex: none;
+}

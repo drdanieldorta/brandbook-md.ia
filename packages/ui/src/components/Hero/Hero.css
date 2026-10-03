@@ -1,0 +1,51 @@
+/* Hero: abertura de página sobre Section (tons, escopo escuro e respiro vêm de
+   lá). Uma coluna por padrão; com aside, grade 3:2 a partir de 1024px
+   (breakpoint PROPOSTO v1; o guia §6 não define breakpoints). */
+.mdia-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--mdia-space-6);
+  align-items: center;
+}
+
+/* Conteúdo: coluna (Stack gap 5) com os itens encostados ao início. */
+.mdia-hero__content {
+  align-items: flex-start;
+  min-width: 0;
+}
+
+/* Lateral: vem depois do conteúdo em uma coluna, limitada para não dominar a
+   faixa em telas médias; o filho (logo ou imagem) nunca estoura a célula. */
+.mdia-hero__aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 30rem;
+  min-width: 0;
+}
+.mdia-hero__aside > * {
+  max-width: 100%;
+}
+
+/* Centralizado (só sem aside): texto e ações ao centro, medida máxima de 60ch. */
+.mdia-hero--center:not(.mdia-hero--with-aside) .mdia-hero__content {
+  align-items: center;
+  max-width: 60ch;
+  margin-inline: auto;
+  text-align: center;
+}
+.mdia-hero--center:not(.mdia-hero--with-aside) .mdia-hero__actions {
+  justify-content: center;
+}
+
+/* lg (1024px, PROPOSTA v1): conteúdo e lateral lado a lado em 3:2. */
+@media (min-width: 1024px) {
+  .mdia-hero__grid--with-aside {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: var(--mdia-space-7);
+  }
+  .mdia-hero__grid--with-aside .mdia-hero__aside {
+    max-width: none;
+  }
+}

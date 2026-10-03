@@ -1,0 +1,99 @@
+/* Grid: grade CSS com colunas fixas ou fluidas; espaçamento pela escala do guia (§6). */
+.mdia-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--mdia-space-5);
+}
+
+/* Como lista (ul/ol): sem marcadores nem recuo. */
+ul.mdia-grid,
+ol.mdia-grid {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+/* Colunas fixas; minmax(0, 1fr) impede que conteúdo largo estoure a célula. */
+.mdia-grid--cols-1 {
+  grid-template-columns: minmax(0, 1fr);
+}
+.mdia-grid--cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.mdia-grid--cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.mdia-grid--cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.mdia-grid--cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.mdia-grid--cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+/* Fluida: --mdia-grid-min vem do estilo inline (prop minItemWidth);
+   min(100%, …) garante uma coluna quando a tela é mais estreita que o item. */
+.mdia-grid--fluid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--mdia-grid-min)), 1fr));
+}
+
+.mdia-grid--align-start {
+  align-items: start;
+}
+.mdia-grid--align-center {
+  align-items: center;
+}
+.mdia-grid--align-end {
+  align-items: end;
+}
+.mdia-grid--align-stretch {
+  align-items: stretch;
+}
+
+/* Escala: 1=4px, 2=8px, 3=12px, 4=16px, 5=24px, 6=32px, 7=48px, 8=64px, 9=96px. */
+.mdia-grid--gap-1 {
+  gap: var(--mdia-space-1);
+}
+.mdia-grid--gap-2 {
+  gap: var(--mdia-space-2);
+}
+.mdia-grid--gap-3 {
+  gap: var(--mdia-space-3);
+}
+.mdia-grid--gap-4 {
+  gap: var(--mdia-space-4);
+}
+.mdia-grid--gap-5 {
+  gap: var(--mdia-space-5);
+}
+.mdia-grid--gap-6 {
+  gap: var(--mdia-space-6);
+}
+.mdia-grid--gap-7 {
+  gap: var(--mdia-space-7);
+}
+.mdia-grid--gap-8 {
+  gap: var(--mdia-space-8);
+}
+.mdia-grid--gap-9 {
+  gap: var(--mdia-space-9);
+}
+
+/* Breakpoints PROPOSTOS v1 (o guia §6 não define grade responsiva; ver tokens.json
+   → breakpoints): md = 768px, sm = 640px. Abaixo de md, 3+ colunas viram uma. */
+@media (max-width: 767.98px) {
+  .mdia-grid--cols-3,
+  .mdia-grid--cols-4,
+  .mdia-grid--cols-6,
+  .mdia-grid--cols-12 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Abaixo de sm, 2 colunas viram uma. */
+@media (max-width: 639.98px) {
+  .mdia-grid--cols-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,26 @@
+/* Container: centraliza e limita a largura. Larguras sm/md e o respiro são
+   PROPOSTA v1 (o guia §6 não define container nem breakpoints); lg usa o token
+   --mdia-container-max. */
+.mdia-container {
+  width: 100%;
+  max-width: var(--mdia-container-max);
+  margin-inline: auto;
+  padding-inline: var(--mdia-container-gutter);
+}
+
+.mdia-container--sm {
+  max-width: 720px; /* PROPOSTA v1 */
+}
+.mdia-container--md {
+  max-width: 960px; /* PROPOSTA v1 */
+}
+.mdia-container--lg {
+  max-width: var(--mdia-container-max);
+}
+.mdia-container--full {
+  max-width: none;
+}
+
+.mdia-container--flush {
+  padding-inline: 0;
+}

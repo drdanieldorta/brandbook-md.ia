@@ -1,0 +1,112 @@
+/* Aviso em linha: fundo claro do tom, faixa e ícone na cor semântica.
+   No tema escuro os tokens semânticos já mudam (tokens.css). */
+.mdia-alert {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--mdia-space-3);
+  padding: var(--mdia-space-4);
+  border-inline-start: 4px solid currentColor;
+  border-radius: var(--mdia-radius-button);
+  color: var(--mdia-color-text);
+  font-size: var(--mdia-font-size-body);
+  line-height: var(--mdia-line-height-body);
+}
+
+.mdia-alert--info {
+  background: var(--mdia-color-info-bg);
+  border-color: var(--mdia-color-info);
+}
+.mdia-alert--info .mdia-alert__icon {
+  color: var(--mdia-color-info);
+}
+
+.mdia-alert--success {
+  background: var(--mdia-color-success-bg);
+  border-color: var(--mdia-color-success);
+}
+.mdia-alert--success .mdia-alert__icon {
+  color: var(--mdia-color-success);
+}
+
+.mdia-alert--warning {
+  background: var(--mdia-color-warning-bg);
+  border-color: var(--mdia-color-warning);
+}
+.mdia-alert--warning .mdia-alert__icon {
+  color: var(--mdia-color-warning);
+}
+
+.mdia-alert--error {
+  background: var(--mdia-color-error-bg);
+  border-color: var(--mdia-color-error);
+}
+.mdia-alert--error .mdia-alert__icon {
+  color: var(--mdia-color-error);
+}
+
+/* Ícone centralizado na primeira linha de texto. */
+.mdia-alert__icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  height: calc(var(--mdia-line-height-body) * 1em);
+}
+.mdia-alert__icon > svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.mdia-alert__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.mdia-alert__title {
+  font-weight: var(--mdia-font-weight-semibold);
+}
+.mdia-alert__action {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mdia-space-2);
+  margin-top: var(--mdia-space-2);
+}
+
+/* Fechar: 32px visuais, 44px de toque via ::before (como em Button--sm). */
+.mdia-alert__dismiss {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: calc(var(--mdia-space-1) * -1) calc(var(--mdia-space-1) * -1)
+    calc(var(--mdia-space-1) * -1) 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--mdia-radius-button);
+  background: transparent;
+  color: var(--mdia-color-text-secondary);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color var(--mdia-motion-feedback) var(--mdia-motion-easing),
+    color var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+.mdia-alert__dismiss::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+}
+.mdia-alert__dismiss > svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+.mdia-alert__dismiss:hover {
+  background: var(--mdia-color-surface);
+  color: var(--mdia-color-text);
+}
+.mdia-alert__dismiss:focus-visible {
+  outline: var(--mdia-focus-ring);
+  outline-offset: var(--mdia-focus-ring-offset);
+}

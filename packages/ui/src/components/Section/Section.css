@@ -1,0 +1,39 @@
+/* Section: faixa de página com fundo e respiro vertical pela escala do guia (§6). */
+.mdia-section {
+  padding-block: var(--mdia-space-8);
+  background: var(--mdia-color-surface);
+  color: var(--mdia-color-text);
+}
+
+/* Tons. O escuro também recebe .mdia-dark no elemento, trocando os tokens internos. */
+.mdia-section--alt {
+  background: var(--mdia-color-surface-alt);
+}
+.mdia-section--dark {
+  background: var(--mdia-color-bg);
+}
+
+/* Respiro: sm 48px, md 64px, lg 96px. */
+.mdia-section--sm {
+  padding-block: var(--mdia-space-7);
+}
+.mdia-section--md {
+  padding-block: var(--mdia-space-8);
+}
+.mdia-section--lg {
+  padding-block: var(--mdia-space-9);
+}
+
+/* Breakpoint PROPOSTO v1 (md = 768px; o guia não define breakpoints):
+   abaixo dele o respiro cai um degrau da escala. */
+@media (max-width: 767.98px) {
+  .mdia-section--sm {
+    padding-block: var(--mdia-space-6);
+  }
+  .mdia-section--md {
+    padding-block: var(--mdia-space-7);
+  }
+  .mdia-section--lg {
+    padding-block: var(--mdia-space-8);
+  }
+}

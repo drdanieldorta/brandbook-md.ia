@@ -1,0 +1,210 @@
+/* ==========================================================================
+   MD.IA — tokens de design (@mdia/ui)
+   Identidade escura (PROPOSTA v2, derivada do playbook MD.IA): carvão em
+   camadas, texto off-white e dourado em gradiente. É o padrão. O tema claro
+   do guia 4.0 (branco e gelo com azul-noite) fica em [data-theme='light'] e
+   .mdia-light. Os valores de marca do guia são preservados nos tokens
+   --mdia-brand-*; o que o guia não define está marcado como PROPOSTA.
+   ========================================================================== */
+:root {
+  /* --- Marca (guia §4, valores imutáveis) --- */
+  --mdia-brand-blue: #1761d8;
+  --mdia-brand-blue-hover: #104dae;
+  --mdia-brand-navy: #102b50;
+  --mdia-brand-gold: #c6a45c;
+  --mdia-brand-purple: #8056c7;
+  --mdia-brand-ice: #f3f6fa;
+  --mdia-brand-white: #ffffff;
+  --mdia-brand-offwhite: #f5f3ee;
+  --mdia-brand-black: #000000;
+
+  /* Cores de marca constantes nos dois temas */
+  --mdia-color-navy: var(--mdia-brand-navy);
+  --mdia-color-purple: var(--mdia-brand-purple);
+  --mdia-color-ice: var(--mdia-brand-ice);
+  --mdia-color-white: var(--mdia-brand-white);
+  --mdia-color-offwhite: var(--mdia-brand-offwhite);
+  --mdia-color-black: var(--mdia-brand-black);
+  --mdia-color-navy-600: #1a3a66; /* PROPOSTA v1: camadas sobre azul-noite */
+  --mdia-color-navy-800: #0b1f3a;
+
+  /* --- Carvão e dourado da identidade escura (PROPOSTA v2) --- */
+  --mdia-color-charcoal-900: #0c0d0f; /* página */
+  --mdia-color-charcoal-800: #101114; /* faixa alternativa */
+  --mdia-color-charcoal-700: #17191d; /* painéis, cabeçalho, campos */
+  --mdia-color-charcoal-600: #202329; /* cards e elementos elevados */
+  --mdia-color-charcoal-500: #33363d; /* linhas */
+  --mdia-color-gold-light: #e3b777; /* dourado para texto e ícones sobre carvão */
+  --mdia-gradient-gold: linear-gradient(
+    115deg,
+    #d8aa6b 0%,
+    #f2c777 24%,
+    #fff1b6 42%,
+    #dca05e 63%,
+    #ffe5a2 82%,
+    #d8aa6b 100%
+  );
+  --mdia-gradient-gold-soft: linear-gradient(
+    115deg,
+    #e3b777 0%,
+    #fff1b6 42%,
+    #e9bc77 64%,
+    #ffe5a2 100%
+  );
+  --mdia-gradient-gold-line: linear-gradient(
+    90deg,
+    transparent,
+    rgba(170, 130, 74, 0.5),
+    transparent
+  );
+  --mdia-gradient-surface: linear-gradient(145deg, #191b20 0%, #101114 65%, #0c0d0f 100%);
+
+  /* --- Tipografia (guia §5). Inter é PROPOSTA v1; Segoe UI/Arial do guia ficam como fallback --- */
+  --mdia-font-family: 'Inter Variable', 'Segoe UI', Arial, sans-serif;
+  --mdia-font-weight-regular: 400;
+  --mdia-font-weight-semibold: 600;
+  --mdia-font-size-display: clamp(3.5rem, 2.9rem + 1.6vw, 4rem); /* 56–64px */
+  --mdia-font-size-title: clamp(2rem, 1.7rem + 1vw, 2.5rem); /* 32–40px */
+  --mdia-font-size-heading: 1.5rem; /* 24px — PROPOSTA v1 */
+  --mdia-font-size-subheading: 1.25rem; /* 20px — PROPOSTA v1 */
+  --mdia-font-size-body: 1rem; /* 16px, token base do JSON */
+  --mdia-font-size-body-lg: 1.125rem; /* 18px, teto do intervalo do guia */
+  --mdia-font-size-body-sm: 0.875rem; /* 14px */
+  --mdia-font-size-label: 0.875rem; /* 14px */
+  --mdia-font-size-caption: 0.75rem; /* 12px — PROPOSTA v1 */
+  --mdia-font-size-eyebrow: 0.8125rem; /* 13px — PROPOSTA v2 (kicker do playbook) */
+  --mdia-line-height-heading: 1.1;
+  --mdia-line-height-body: 1.6;
+  --mdia-line-height-tight: 1.3; /* PROPOSTA v1: subtítulos e rótulos */
+  --mdia-measure: 65ch; /* dentro do intervalo 45–75 caracteres do guia */
+
+  /* --- Espaçamento (guia §6: 4/8/12/16/24/32/48/64/96) --- */
+  --mdia-space-1: 4px;
+  --mdia-space-2: 8px;
+  --mdia-space-3: 12px;
+  --mdia-space-4: 16px;
+  --mdia-space-5: 24px;
+  --mdia-space-6: 32px;
+  --mdia-space-7: 48px;
+  --mdia-space-8: 64px;
+  --mdia-space-9: 96px;
+
+  /* --- Raios (guia §6) --- */
+  --mdia-radius-button: 8px;
+  --mdia-radius-panel: 16px;
+  --mdia-radius-full: 999px; /* PROPOSTA v1 */
+
+  /* --- Movimento (guia §10): animar uma vez, sem flashes nem ciclos contínuos --- */
+  --mdia-motion-feedback: 180ms;
+  --mdia-motion-entrance: 400ms;
+  --mdia-motion-easing: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* --- Toque e foco (guia §7) --- */
+  --mdia-size-touch: 44px;
+  --mdia-focus-ring-width: 3px;
+  --mdia-focus-ring-color: var(--mdia-color-purple);
+  --mdia-focus-ring: var(--mdia-focus-ring-width) solid var(--mdia-focus-ring-color);
+  --mdia-focus-ring-offset: 2px; /* PROPOSTA v1 */
+
+  /* --- Elevação (PROPOSTA v1; sombra "lg" é a do toast da demonstração) --- */
+  --mdia-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.24);
+  --mdia-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.32);
+  --mdia-shadow-lg: 0 6px 25px rgba(0, 0, 0, 0.45);
+
+  /* --- Camadas (PROPOSTA v1) --- */
+  --mdia-z-dropdown: 1000;
+  --mdia-z-sticky: 1100;
+  --mdia-z-overlay: 1300;
+  --mdia-z-modal: 1400;
+  --mdia-z-toast: 1500;
+
+  /* --- Layout (PROPOSTA v1; breakpoints: sm 640, md 768, lg 1024, xl 1280) --- */
+  --mdia-container-max: 1200px;
+  --mdia-container-gutter: var(--mdia-space-5);
+
+  /* --- Compatibilidade com mdia-tokens.css original do guia --- */
+  --mdia-blue: var(--mdia-color-blue);
+  --mdia-navy: var(--mdia-color-navy);
+  --mdia-gold: var(--mdia-color-gold);
+  --mdia-purple: var(--mdia-color-purple);
+  --mdia-ice: var(--mdia-color-ice);
+  --mdia-font: var(--mdia-font-family);
+  --mdia-radius: var(--mdia-radius-button);
+  --mdia-motion: var(--mdia-motion-feedback);
+}
+
+/* --- Tema escuro: o padrão da identidade (PROPOSTA v2) e o escopo explícito --- */
+:root,
+[data-theme='dark'],
+.mdia-dark {
+  color-scheme: dark;
+  --mdia-color-bg: var(--mdia-color-charcoal-900);
+  --mdia-color-surface: var(--mdia-color-charcoal-700);
+  --mdia-color-surface-alt: var(--mdia-color-charcoal-800);
+  --mdia-color-surface-raised: var(--mdia-color-charcoal-600);
+  --mdia-color-surface-hover: #262a31;
+  --mdia-color-surface-ghost-hover: rgba(241, 238, 232, 0.06);
+  --mdia-color-surface-disabled: #2a2e35;
+  --mdia-color-text: #f1eee8;
+  --mdia-color-text-secondary: #adb2bb;
+  --mdia-color-text-disabled: #7c8189;
+  --mdia-color-border: var(--mdia-color-charcoal-500);
+  --mdia-color-border-strong: #767c88; /* >= 3:1 sobre as três camadas (WCAG 1.4.11) */
+  --mdia-color-blue: #5f96e8; /* azul vivo clareado para 4,5:1 sobre carvão */
+  --mdia-color-blue-hover: #84aeec;
+  --mdia-color-gold: var(--mdia-color-gold-light);
+  --mdia-color-on-gold: #17130d; /* texto sobre o gradiente dourado */
+  --mdia-color-gold-soft-bg: var(--mdia-color-charcoal-600);
+  --mdia-color-primary-bg: var(--mdia-gradient-gold);
+  --mdia-color-primary-bg-hover: var(--mdia-gradient-gold-soft);
+  --mdia-color-primary-text: var(--mdia-color-on-gold);
+  --mdia-color-on-status: var(--mdia-color-charcoal-900);
+  --mdia-color-success: #4cc38a;
+  --mdia-color-success-bg: rgba(76, 195, 138, 0.14);
+  --mdia-color-warning: #e3c06e;
+  --mdia-color-warning-bg: rgba(227, 192, 110, 0.14);
+  --mdia-color-error: #f08a7e;
+  --mdia-color-error-bg: rgba(240, 138, 126, 0.14);
+  --mdia-color-info: #5f96e8;
+  --mdia-color-info-bg: rgba(95, 150, 232, 0.14);
+  /* compatibilidade com a v1 */
+  --mdia-color-text-on-dark: #f1eee8;
+  --mdia-color-text-secondary-on-dark: #adb2bb;
+  --mdia-color-text-disabled-on-dark: #7c8189;
+  --mdia-color-border-on-dark: var(--mdia-color-charcoal-500);
+}
+
+/* --- Tema claro: a paleta do guia 4.0, por escopo --- */
+[data-theme='light'],
+.mdia-light {
+  color-scheme: light;
+  --mdia-color-bg: var(--mdia-brand-white);
+  --mdia-color-surface: var(--mdia-brand-white);
+  --mdia-color-surface-alt: var(--mdia-brand-ice);
+  --mdia-color-surface-raised: var(--mdia-brand-white);
+  --mdia-color-surface-hover: #e9f0f9; /* observado na demonstração */
+  --mdia-color-surface-ghost-hover: #edf3fd;
+  --mdia-color-surface-disabled: #dde4ed;
+  --mdia-color-text: var(--mdia-brand-navy);
+  --mdia-color-text-secondary: #57677b;
+  --mdia-color-text-disabled: #536278;
+  --mdia-color-border: #dde4ed;
+  --mdia-color-border-strong: #75849a; /* PROPOSTA v1: limites de controles >= 3:1 */
+  --mdia-color-blue: var(--mdia-brand-blue);
+  --mdia-color-blue-hover: var(--mdia-brand-blue-hover);
+  --mdia-color-gold: var(--mdia-brand-gold);
+  --mdia-color-on-gold: var(--mdia-brand-navy);
+  --mdia-color-gold-soft-bg: var(--mdia-brand-navy);
+  --mdia-color-primary-bg: var(--mdia-brand-blue);
+  --mdia-color-primary-bg-hover: var(--mdia-brand-blue-hover);
+  --mdia-color-primary-text: var(--mdia-brand-white);
+  --mdia-color-on-status: var(--mdia-brand-white);
+  --mdia-color-success: #1e7b4e;
+  --mdia-color-success-bg: #e6f4ec;
+  --mdia-color-warning: #8a6a1f;
+  --mdia-color-warning-bg: #fbf4e3;
+  --mdia-color-error: #c0392b;
+  --mdia-color-error-bg: #fbeae7;
+  --mdia-color-info: var(--mdia-brand-blue);
+  --mdia-color-info-bg: #e8f0fc;
+}
