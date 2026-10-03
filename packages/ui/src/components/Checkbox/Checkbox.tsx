@@ -91,7 +91,12 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Che
         </span>
       ) : null}
       {hasError ? (
-        <span id={errorId} className="mdia-checkbox__error" role="alert">
+        <span
+          id={errorId}
+          className="mdia-checkbox__error"
+          role="alert"
+          onClick={(event) => event.preventDefault()}
+        >
           <CircleAlert aria-hidden="true" />
           <span>{error}</span>
         </span>

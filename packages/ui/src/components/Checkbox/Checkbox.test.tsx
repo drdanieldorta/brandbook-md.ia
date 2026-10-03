@@ -98,4 +98,10 @@ describe('Checkbox', () => {
     expect(checkbox.closest('label')).toHaveClass('mdia-checkbox', 'extra');
     expect(checkbox).toHaveAccessibleDescription('Interna Dica externa');
   });
+  it('não alterna ao clicar na mensagem de erro', async () => {
+    const user = userEvent.setup();
+    render(<Checkbox label="Aceito os termos" error="Aceite os termos para continuar." />);
+    await user.click(screen.getByRole('alert'));
+    expect(screen.getByRole('checkbox')).not.toBeChecked();
+  });
 });
