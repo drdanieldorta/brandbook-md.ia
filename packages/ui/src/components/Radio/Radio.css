@@ -1,0 +1,148 @@
+/* Radio (guia §7): mesma anatomia do Checkbox com círculo de 20px e ponto
+   interno quando marcado. Foco de 3px no desenho, linha com 44px de toque. */
+.mdia-radio {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: minmax(var(--mdia-size-touch), auto);
+  column-gap: var(--mdia-space-3);
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mdia-radio--disabled {
+  color: var(--mdia-color-text-disabled);
+  cursor: not-allowed;
+}
+
+.mdia-radio__box {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--mdia-color-border);
+  border-radius: 50%;
+  background: var(--mdia-color-surface);
+  color: var(--mdia-color-white);
+  transition:
+    background-color var(--mdia-motion-feedback) var(--mdia-motion-easing),
+    border-color var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+
+/* Ponto interno: só aparece marcado (forma + cor, nunca só cor). */
+.mdia-radio__box::after {
+  content: '';
+  display: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Hover (habilitado): borda mais escura. */
+.mdia-radio:hover .mdia-radio__input:not(:disabled) + .mdia-radio__box {
+  border-color: var(--mdia-color-text-secondary);
+}
+
+/* Inválido: borda de erro, mantida no hover. */
+.mdia-radio--invalid .mdia-radio__box,
+.mdia-radio--invalid:hover .mdia-radio__input:not(:disabled) + .mdia-radio__box {
+  border-color: var(--mdia-color-error);
+}
+
+/* Marcado: fundo azul vivo e ponto branco. */
+.mdia-radio__input:checked + .mdia-radio__box {
+  background: var(--mdia-color-blue);
+  border-color: var(--mdia-color-blue);
+}
+.mdia-radio:hover .mdia-radio__input:checked:not(:disabled) + .mdia-radio__box {
+  background: var(--mdia-color-blue-hover);
+  border-color: var(--mdia-color-blue-hover);
+}
+.mdia-radio__input:checked + .mdia-radio__box::after {
+  display: block;
+}
+
+/* Foco visível no desenho, já que o input real está oculto. */
+.mdia-radio__input:focus-visible + .mdia-radio__box {
+  outline: var(--mdia-focus-ring);
+  outline-offset: var(--mdia-focus-ring-offset);
+}
+
+/* Desabilitado: sem interação (guia §7). */
+.mdia-radio__input:disabled + .mdia-radio__box {
+  background: var(--mdia-color-surface-disabled);
+  border-color: var(--mdia-color-surface-disabled);
+  color: var(--mdia-color-text-disabled);
+}
+
+.mdia-radio__label {
+  font-size: var(--mdia-font-size-body);
+  line-height: var(--mdia-line-height-body);
+}
+
+.mdia-radio__description {
+  grid-column: 2;
+  font-size: var(--mdia-font-size-body-sm);
+  line-height: 1.5;
+  color: var(--mdia-color-text-secondary);
+}
+.mdia-radio--disabled .mdia-radio__description {
+  color: inherit;
+}
+
+/* --- RadioGroup: fieldset com legenda, dica, opções e erro --- */
+.mdia-radio-group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.mdia-radio-group__legend {
+  padding: 0;
+  margin-bottom: var(--mdia-space-2);
+  font-size: var(--mdia-font-size-body);
+  font-weight: var(--mdia-font-weight-semibold);
+  line-height: var(--mdia-line-height-tight);
+}
+.mdia-radio-group--disabled .mdia-radio-group__legend {
+  color: var(--mdia-color-text-disabled);
+}
+
+.mdia-radio-group__hint {
+  margin-bottom: var(--mdia-space-2);
+  font-size: var(--mdia-font-size-body-sm);
+  line-height: 1.5;
+  color: var(--mdia-color-text-secondary);
+}
+
+.mdia-radio-group__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mdia-space-1);
+}
+.mdia-radio-group--horizontal .mdia-radio-group__options {
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: var(--mdia-space-5);
+  row-gap: var(--mdia-space-1);
+}
+
+.mdia-radio-group__error {
+  display: flex;
+  align-items: center;
+  gap: var(--mdia-space-1);
+  margin-top: var(--mdia-space-1);
+  font-size: var(--mdia-font-size-label);
+  line-height: 1.5;
+  color: var(--mdia-color-error);
+}
+.mdia-radio-group__error > svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}

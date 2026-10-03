@@ -16,6 +16,9 @@
 @import '../components/TextInput/TextInput.css';
 @import '../components/TextArea/TextArea.css';
 @import '../components/Select/Select.css';
+@import '../components/Checkbox/Checkbox.css';
+@import '../components/Radio/Radio.css';
+@import '../components/Switch/Switch.css';
 @import '../components/Badge/Badge.css';
 @import '../components/Alert/Alert.css';
 @import '../components/Toast/Toast.css';

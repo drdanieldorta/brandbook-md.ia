@@ -1,0 +1,126 @@
+/* Switch (guia §7): trilho 44×24px (md) ou 36×20px (sm) com raio total, polegar
+   branco com ícone de check quando ligado. A linha inteira (44px) é o rótulo
+   clicável; o botão amplia sua área de toque vertical até 44px. */
+.mdia-switch {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: minmax(var(--mdia-size-touch), auto);
+  column-gap: var(--mdia-space-3);
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mdia-switch--disabled {
+  color: var(--mdia-color-text-disabled);
+  cursor: not-allowed;
+}
+
+.mdia-switch__control {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  width: 44px;
+  height: 24px;
+  padding: 2px;
+  border: 0;
+  border-radius: var(--mdia-radius-full);
+  background: var(--mdia-color-border);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+
+/* Área de toque de 44px na vertical (como Button--sm). */
+.mdia-switch__control::before {
+  content: '';
+  position: absolute;
+  inset: -10px 0;
+}
+
+.mdia-switch__control:focus-visible {
+  outline: var(--mdia-focus-ring);
+  outline-offset: var(--mdia-focus-ring-offset);
+}
+
+/* Ligado: trilho azul vivo, hover #104DAE como no botão principal. */
+.mdia-switch__control[aria-checked='true'] {
+  background: var(--mdia-color-blue);
+}
+.mdia-switch__control[aria-checked='true']:hover:not(:disabled) {
+  background: var(--mdia-color-blue-hover);
+}
+
+.mdia-switch__thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--mdia-color-white);
+  color: var(--mdia-color-blue);
+  box-shadow: var(--mdia-shadow-sm);
+  transform: translateX(0);
+  transition: transform var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+.mdia-switch__control[aria-checked='true'] .mdia-switch__thumb {
+  transform: translateX(20px);
+}
+
+/* Ícone de check: o estado ligado não depende só de cor. */
+.mdia-switch__icon {
+  display: none;
+  width: 12px;
+  height: 12px;
+}
+.mdia-switch__control[aria-checked='true'] .mdia-switch__icon {
+  display: block;
+}
+
+/* Desabilitado: sem interação (guia §7). */
+.mdia-switch__control:disabled {
+  background: var(--mdia-color-surface-disabled);
+  cursor: not-allowed;
+}
+.mdia-switch__control:disabled .mdia-switch__thumb {
+  color: var(--mdia-color-text-disabled);
+  box-shadow: none;
+}
+
+/* Tamanho sm: 36×20px, polegar 16px, mesma área de toque. */
+.mdia-switch--sm .mdia-switch__control {
+  width: 36px;
+  height: 20px;
+}
+.mdia-switch--sm .mdia-switch__control::before {
+  inset: -12px 0;
+}
+.mdia-switch--sm .mdia-switch__thumb {
+  width: 16px;
+  height: 16px;
+}
+.mdia-switch--sm .mdia-switch__control[aria-checked='true'] .mdia-switch__thumb {
+  transform: translateX(16px);
+}
+.mdia-switch--sm .mdia-switch__icon {
+  width: 10px;
+  height: 10px;
+}
+
+.mdia-switch__label {
+  font-size: var(--mdia-font-size-body);
+  line-height: var(--mdia-line-height-body);
+}
+
+.mdia-switch__description {
+  grid-column: 2;
+  font-size: var(--mdia-font-size-body-sm);
+  line-height: 1.5;
+  color: var(--mdia-color-text-secondary);
+}
+.mdia-switch--disabled .mdia-switch__description {
+  color: inherit;
+}
