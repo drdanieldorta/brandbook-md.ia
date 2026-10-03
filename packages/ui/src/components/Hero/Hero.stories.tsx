@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Badge } from '../Badge/Badge';
 import { Button, ButtonLink } from '../Button/Button';
 import { Logo } from '../Logo/Logo';
+import { ThemeScope } from '../ThemeScope/ThemeScope';
 import { Hero } from './Hero';
 
 const meta = {
@@ -29,7 +30,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 /**
- * Azul-noite com o mestre com brilho na lateral (só sobre fundo escuro, guia §3),
+ * Fundo escuro (carvão) com o mestre com brilho na lateral (só sobre fundo escuro, guia §3),
  * eyebrow dourado, título display e duas ações sem concorrer com uma principal.
  */
 export const Padrao: Story = {
@@ -53,8 +54,13 @@ export const Padrao: Story = {
   },
 };
 
-/** Tom claro com a variante limpa na lateral e uma ação principal (guia §7). */
+/** Tema claro do guia por escopo (`ThemeScope mode="light"`): tom padrão, variante limpa na lateral e uma ação principal (guia §7). */
 export const Claro: Story = {
+  render: (args) => (
+    <ThemeScope mode="light">
+      <Hero {...args} />
+    </ThemeScope>
+  ),
   args: {
     tone: 'default',
     title: 'Tecnologia com critério. Saúde com protagonismo humano.',
@@ -74,7 +80,7 @@ export const Claro: Story = {
   },
 };
 
-/** Sem lateral e centralizado sobre o gelo: conteúdo com no máximo 60ch. */
+/** Sem lateral e centralizado sobre a faixa alternativa (`alt`): conteúdo com no máximo 60ch. */
 export const Centralizado: Story = {
   args: {
     tone: 'alt',

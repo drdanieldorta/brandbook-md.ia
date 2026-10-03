@@ -42,7 +42,7 @@ export const Tamanhos: Story = {
 export const Tons: Story = {
   render: (args) => (
     <div style={{ display: 'grid', gap: 8 }}>
-      <Text {...args}>Padrão: azul-noite sobre superfície clara.</Text>
+      <Text {...args}>Padrão: off-white sobre carvão (azul-noite no tema claro).</Text>
       <Text {...args} tone="secondary">
         Secundário: informação de apoio.
       </Text>

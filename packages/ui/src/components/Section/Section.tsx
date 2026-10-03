@@ -11,7 +11,7 @@ export type SectionElement = 'section' | 'div' | 'header' | 'footer';
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
   /** Elemento renderizado. */
   as?: SectionElement;
-  /** `default`: superfície; `alt`: gelo; `dark`: azul-noite com escopo `mdia-dark`. */
+  /** `default`: superfície; `alt`: superfície alternativa (gelo no tema claro); `dark`: fundo da página com escopo `mdia-dark`. */
   tone?: SectionTone;
   /** Padding vertical pela escala: `sm` 48px, `md` 64px, `lg` 96px. */
   spacing?: SectionSpacing;

@@ -49,7 +49,7 @@ type Story = StoryObj<typeof meta>;
  */
 export const Padrao: Story = {};
 
-/** Tom escuro: escopo `mdia-dark`, logo off-white, marca monocromática e dourado na página atual. */
+/** Tom escuro: logo off-white e marca monocromática; no tema claro aplica o escopo `mdia-dark` (fundo e texto do tema escuro). */
 export const Escuro: Story = {
   args: { tone: 'dark' },
   globals: { backgrounds: { value: 'escuro' } },

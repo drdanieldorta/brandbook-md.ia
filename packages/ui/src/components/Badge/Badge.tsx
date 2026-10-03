@@ -6,7 +6,7 @@ export type BadgeVariant = 'soft' | 'solid' | 'outline';
 export type BadgeSize = 'sm' | 'md';
 
 export interface BadgeProps extends HTMLAttributes<HTMLElement> {
-  /** `gold` só aparece sobre azul-noite (dourado sobre branco reprova em contraste, guia §4). */
+  /** `gold` só aparece sobre fundo escuro (dourado sobre branco reprova em contraste, guia §4). */
   tone?: BadgeTone;
   /** `soft`: fundo claro do tom; `solid`: fundo no tom; `outline`: só contorno. */
   variant?: BadgeVariant;

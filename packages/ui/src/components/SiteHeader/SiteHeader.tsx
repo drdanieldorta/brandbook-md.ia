@@ -33,7 +33,7 @@ export interface SiteHeaderProps extends HTMLAttributes<HTMLElement> {
   cta?: ReactNode;
   /** Fixa a barra no topo (`position: sticky`, camada `--mdia-z-sticky`); padrão `true`. */
   sticky?: boolean;
-  /** `dark` aplica o escopo `mdia-dark`: fundo azul-noite, logo off-white e marca monocromática. */
+  /** `dark` aplica o escopo `mdia-dark` (tema escuro mesmo dentro de uma área clara), com logo off-white e marca monocromática. */
   tone?: SiteHeaderTone;
   /** Rótulo do `<nav>`; padrão "Principal". */
   navLabel?: string;

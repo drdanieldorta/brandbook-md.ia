@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { ThemeScope } from '../ThemeScope/ThemeScope';
 import { SiteFooter } from './SiteFooter';
 
 const columns = [
@@ -49,14 +50,19 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 /**
- * Azul-noite com logo off-white, três colunas de links (cada uma um `nav` nomeado
+ * Fundo da página (carvão) com logo off-white, três colunas de links (cada uma um `nav` nomeado
  * pelo título) e a linha legal. "Storybook" é externo: abre em nova aba com aviso.
  */
 export const Padrao: Story = {};
 
-/** Tom claro: superfície branca, borda superior e logo limpo. */
+/** Tema claro do guia por escopo (`ThemeScope mode="light"`), tom padrão: superfície branca, borda superior e logo limpo. */
 export const Claro: Story = {
   args: { tone: 'default' },
+  render: (args) => (
+    <ThemeScope mode="light">
+      <SiteFooter {...args} />
+    </ThemeScope>
+  ),
 };
 
 /** Mínimo: só o logo e a linha legal. */

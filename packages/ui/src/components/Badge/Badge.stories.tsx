@@ -33,8 +33,9 @@ type Story = StoryObj<typeof meta>;
 export const Padrao: Story = {};
 
 /**
- * Tom × variante. `gold` nunca aparece sobre branco: a suave usa azul-noite com
- * dourado (guia §4) e a sólida inverte o par; o contorno dourado usa texto na cor de texto.
+ * Tom × variante. `gold` nunca aparece sobre branco: a suave usa fundo escuro com
+ * dourado (carvão elevado no tema escuro, azul-noite no claro, guia §4), a sólida
+ * inverte o par e o contorno dourado usa texto na cor de texto.
  */
 export const Variantes: Story = {
   render: (args) => (
@@ -81,7 +82,7 @@ export const ComIcone: Story = {
   ),
 };
 
-/** Sobre fundo escuro: tons semânticos clareiam; o sólido troca o texto para azul-noite. */
+/** Sobre fundo escuro: tons semânticos clareiam; o sólido usa texto escuro (carvão). */
 export const SobreFundoEscuro: Story = {
   globals: { backgrounds: { value: 'escuro' } },
   render: (args) => (

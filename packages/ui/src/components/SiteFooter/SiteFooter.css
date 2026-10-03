@@ -1,6 +1,6 @@
 /* SiteFooter: coluna da marca e colunas de links em Grid fluida, linha legal
    após o Divider. Tokens semânticos cuidam do tom escuro via .mdia-dark; só o
-   fundo azul-noite é explícito, como na Section. */
+   fundo escuro (fundo da página) é explícito, como na Section. */
 .mdia-site-footer {
   padding-block: var(--mdia-space-8);
   background: var(--mdia-color-surface);

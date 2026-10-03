@@ -11,7 +11,7 @@ export interface CardProps extends HTMLAttributes<HTMLElement> {
   as?: CardElement;
   /** Destino do cartão-link (`as="a"`). */
   href?: string;
-  /** `default`: superfície com borda; `alt`: gelo; `dark`: azul-noite com escopo `mdia-dark`. */
+  /** `default`: superfície elevada com borda; `alt`: superfície alternativa (gelo no tema claro); `dark`: escopo `mdia-dark`, tema escuro mesmo em área clara. */
   tone?: CardTone;
   /** `sm` 16px, `md` 24px, `lg` 32px, `none` 0. */
   padding?: CardPadding;

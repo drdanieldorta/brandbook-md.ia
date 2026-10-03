@@ -3,7 +3,7 @@ import type { CSSProperties, ReactNode } from 'react';
 import { Text } from '../Text';
 import { Container } from './Container';
 
-/* Bloco de visualização: fundo gelo e borda tracejada para enxergar os limites do container. */
+/* Bloco de visualização: fundo alternativo e borda tracejada para enxergar os limites do container. */
 const blocoStyle: CSSProperties = {
   padding: 16,
   background: 'var(--mdia-color-surface-alt)',

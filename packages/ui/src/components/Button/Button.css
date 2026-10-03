@@ -40,7 +40,7 @@
   background: var(--mdia-color-primary-bg-hover);
 }
 
-/* Secundário: superfície com borda e texto azul-noite. */
+/* Secundário: superfície com borda e texto na cor do texto (azul-noite no tema claro). */
 .mdia-button--secondary {
   background: var(--mdia-color-surface);
   color: var(--mdia-color-text);

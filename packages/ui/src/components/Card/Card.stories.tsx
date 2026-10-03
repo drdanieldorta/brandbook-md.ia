@@ -43,7 +43,7 @@ export const Padrao: Story = {
   ),
 };
 
-/** `default` (branco com borda), `alt` (gelo) e `dark` (azul-noite, escopo `mdia-dark`). */
+/** `default` (superfície elevada com borda), `alt` (superfície alternativa) e `dark` (escopo `mdia-dark`: tema escuro mesmo em área clara). */
 export const Tons: Story = {
   render: (args) => (
     <div
@@ -57,19 +57,19 @@ export const Tons: Story = {
         <Heading level={3} size="subheading">
           Padrão
         </Heading>
-        <Text>Superfície branca com borda.</Text>
+        <Text>Superfície elevada com borda (branca no tema claro).</Text>
       </Card>
       <Card {...args} tone="alt">
         <Heading level={3} size="subheading">
           Alternativo
         </Heading>
-        <Text>Gelo, para destacar sobre o branco.</Text>
+        <Text>Superfície alternativa, para destacar sobre o fundo (gelo no tema claro).</Text>
       </Card>
       <Card {...args} tone="dark">
         <Heading level={3} size="subheading">
           Escuro
         </Heading>
-        <Text>Azul-noite; o conteúdo usa os tokens do tema escuro.</Text>
+        <Text>Escopo escuro: o conteúdo usa os tokens do tema escuro mesmo em área clara.</Text>
       </Card>
     </div>
   ),

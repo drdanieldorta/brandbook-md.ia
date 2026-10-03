@@ -24,7 +24,7 @@ export interface HeroProps extends Omit<HTMLAttributes<HTMLElement>, 'title'> {
   actions?: ReactNode;
   /** Coluna lateral a partir de 1024px, ex.: `<Logo variant="mestre" width="100%" />` sobre fundo escuro. */
   aside?: ReactNode;
-  /** `dark` (padrão): azul-noite com escopo `mdia-dark`; `default`: superfície; `alt`: gelo. */
+  /** `dark` (padrão): fundo da página com escopo `mdia-dark`; `default`: superfície; `alt`: superfície alternativa (gelo no tema claro). */
   tone?: HeroTone;
   /** `center` centraliza conteúdo (máx. 60ch) e ações quando não há `aside`. */
   align?: HeroAlign;

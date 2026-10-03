@@ -8,7 +8,7 @@ export type ButtonVariant = 'primary' | 'secondary' | 'ghost';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
 export interface ButtonStyleProps {
-  /** `primary`: azul vivo (uma por contexto). `secondary`: contorno azul-noite. `ghost`: ação discreta. */
+  /** `primary`: gradiente dourado com texto escuro (uma por contexto; azul vivo no tema claro). `secondary`: contorno na cor do texto. `ghost`: ação discreta. */
   variant?: ButtonVariant;
   /** `md` tem 44px de altura (toque mínimo do guia); `sm` reduz o visual mantendo 44px de área de toque. */
   size?: ButtonSize;
@@ -74,8 +74,9 @@ function ButtonContent({
 
 /**
  * Botão do guia 4.0 (§7): raio 8px, área de toque 44px, foco visível de 3px,
- * principal azul com hover #104DAE, secundário com contorno azul-noite e ação
- * discreta transparente. `type` é `button` por padrão.
+ * principal em gradiente dourado (azul vivo com hover #104DAE no tema claro),
+ * secundário com contorno na cor do texto e ação discreta transparente. `type` é
+ * `button` por padrão.
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   {

@@ -48,7 +48,7 @@ export const Padrao: Story = {
   ),
 };
 
-/** Faixas alternadas: `default`, `alt` (gelo) e `dark` (azul-noite com escopo `mdia-dark`). */
+/** Faixas alternadas: `default` (superfície), `alt` (superfície alternativa) e `dark` (fundo da página com escopo `mdia-dark`). */
 export const Tons: Story = {
   render: (args) => (
     <>

@@ -25,7 +25,7 @@ export interface SiteFooterColumn {
 export type SiteFooterTone = 'dark' | 'default';
 
 export interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
-  /** `dark` (padrão): azul-noite com escopo `mdia-dark` e logo off-white; `default`: superfície clara e logo limpo. */
+  /** `dark` (padrão): fundo da página com escopo `mdia-dark` e logo off-white; `default`: superfície e logo limpo. */
   tone?: SiteFooterTone;
   /** Slot do logo; por padrão o `Logo` de 160px na variante do tom, com nome "MD.IA". */
   logo?: ReactNode;
