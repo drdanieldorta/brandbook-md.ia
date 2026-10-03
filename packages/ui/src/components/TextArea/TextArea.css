@@ -1,0 +1,58 @@
+.mdia-text-area {
+  display: inline-block;
+  max-width: 100%;
+  min-height: var(--mdia-size-touch);
+  margin: 0;
+  padding: var(--mdia-space-3) var(--mdia-space-4);
+  border: 1px solid var(--mdia-color-border);
+  border-radius: var(--mdia-radius-button);
+  background: var(--mdia-color-surface);
+  color: var(--mdia-color-text);
+  font: inherit;
+  font-size: var(--mdia-font-size-body);
+  line-height: var(--mdia-line-height-body);
+  vertical-align: top;
+  resize: vertical;
+  transition:
+    border-color var(--mdia-motion-feedback) var(--mdia-motion-easing),
+    background-color var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+
+.mdia-text-area--full {
+  width: 100%;
+}
+
+.mdia-text-area--resize-none {
+  resize: none;
+}
+
+.mdia-text-area::placeholder {
+  color: var(--mdia-color-text-secondary);
+  opacity: 1; /* o Firefox reduz a opacidade do placeholder por padrão */
+}
+
+.mdia-text-area:hover:not(:disabled) {
+  border-color: var(--mdia-color-text-secondary);
+}
+
+.mdia-text-area:focus-visible {
+  outline: var(--mdia-focus-ring);
+  outline-offset: var(--mdia-focus-ring-offset);
+  border-color: var(--mdia-color-blue);
+}
+
+/* Inválido: a borda acompanha a mensagem de erro do Field (estado nunca só por cor). */
+.mdia-text-area[aria-invalid='true'] {
+  border-color: var(--mdia-color-error);
+}
+
+.mdia-text-area:disabled {
+  background: var(--mdia-color-surface-disabled);
+  color: var(--mdia-color-text-disabled);
+  -webkit-text-fill-color: var(
+    --mdia-color-text-disabled
+  ); /* iOS Safari ignora color em campos desabilitados */
+  opacity: 1;
+  cursor: not-allowed;
+  resize: none;
+}

@@ -1,0 +1,84 @@
+.mdia-select {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  font-size: var(--mdia-font-size-body);
+  color: var(--mdia-color-text);
+}
+
+.mdia-select--full {
+  width: 100%;
+}
+
+.mdia-select__control {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: var(--mdia-size-touch);
+  margin: 0;
+  padding: 0 calc(var(--mdia-space-4) + 1.25em + var(--mdia-space-2)) 0 var(--mdia-space-4);
+  border: 1px solid var(--mdia-color-border);
+  border-radius: var(--mdia-radius-button);
+  background: var(--mdia-color-surface);
+  color: var(--mdia-color-text);
+  font: inherit;
+  line-height: 1.2;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  transition:
+    border-color var(--mdia-motion-feedback) var(--mdia-motion-easing),
+    background-color var(--mdia-motion-feedback) var(--mdia-motion-easing);
+}
+
+/* As opções da lista nativa mantêm a cor do texto mesmo com o placeholder esmaecido. */
+.mdia-select__control option {
+  color: var(--mdia-color-text);
+}
+
+/* Placeholder (opção vazia) selecionado: mesma cor de apoio do placeholder do TextInput. */
+.mdia-select__control:has(option[value='']:checked) {
+  color: var(--mdia-color-text-secondary);
+}
+
+.mdia-select__control:hover:not(:disabled) {
+  border-color: var(--mdia-color-text-secondary);
+}
+
+.mdia-select__control:focus-visible {
+  outline: var(--mdia-focus-ring);
+  outline-offset: var(--mdia-focus-ring-offset);
+  border-color: var(--mdia-color-blue);
+}
+
+/* Inválido: a borda acompanha a mensagem de erro do Field (estado nunca só por cor). */
+.mdia-select__control[aria-invalid='true'] {
+  border-color: var(--mdia-color-error);
+}
+
+.mdia-select__control:disabled,
+.mdia-select__control:disabled:has(option[value='']:checked) {
+  background: var(--mdia-color-surface-disabled);
+  color: var(--mdia-color-text-disabled);
+  -webkit-text-fill-color: var(
+    --mdia-color-text-disabled
+  ); /* iOS Safari ignora color em campos desabilitados */
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+/* Seta decorativa (1.25em), sem capturar cliques. */
+.mdia-select__icon {
+  position: absolute;
+  top: 50%;
+  right: var(--mdia-space-4);
+  width: 1.25em;
+  height: 1.25em;
+  transform: translateY(-50%);
+  color: var(--mdia-color-text-secondary);
+  pointer-events: none;
+}
+
+.mdia-select--disabled .mdia-select__icon {
+  color: var(--mdia-color-text-disabled);
+}

@@ -1,0 +1,58 @@
+.mdia-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--mdia-space-2);
+  min-width: 0;
+  max-width: 100%;
+  font-size: var(--mdia-font-size-body);
+  color: var(--mdia-color-text);
+}
+
+/* Rótulo: 14px, peso 600. */
+.mdia-field__label {
+  font-size: var(--mdia-font-size-label);
+  font-weight: var(--mdia-font-weight-semibold);
+  line-height: var(--mdia-line-height-tight);
+}
+
+.mdia-field__required {
+  color: var(--mdia-color-error);
+}
+
+.mdia-field__optional {
+  font-weight: var(--mdia-font-weight-regular);
+  color: var(--mdia-color-text-secondary);
+}
+
+.mdia-field__hint {
+  margin: 0;
+  font-size: var(--mdia-font-size-body-sm);
+  line-height: 1.5;
+  color: var(--mdia-color-text-secondary);
+}
+
+/* Erro: ícone + texto, nunca só por cor (guia §7). */
+.mdia-field__error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--mdia-space-1);
+  margin: 0;
+  font-size: var(--mdia-font-size-body-sm);
+  line-height: 1.5;
+  color: var(--mdia-color-error);
+}
+
+.mdia-field__error-icon {
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 0.125em; /* centraliza o ícone na primeira linha (entrelinha 1,5) */
+}
+
+.mdia-field--disabled .mdia-field__label,
+.mdia-field--disabled .mdia-field__required,
+.mdia-field--disabled .mdia-field__optional,
+.mdia-field--disabled .mdia-field__hint {
+  color: var(--mdia-color-text-disabled);
+}
